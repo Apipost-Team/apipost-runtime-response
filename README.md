@@ -12,12 +12,12 @@ $ npm install apipost-runtime-response
 const {ipcRenderer} = require('electron');
 
 $(function(){
-ipcRenderer.on('runtime_response', function(event, arg){
-    console.log(arg)
-})
+    ipcRenderer.on('runtime_response', function(event, arg){
+        console.log(arg)
+    })
 
-$(document).on('click', '.encode-btn', function(){
-    ipcRenderer.send('runtime_request', {runtime_id:'123', action:'runner', chunk:_data});
+    $(document).on('click', '.encode-btn', function(){
+        ipcRenderer.send('runtime_request', {runtime_id:'123', action:'runner', chunk:_data});
     })
 })
 ```
