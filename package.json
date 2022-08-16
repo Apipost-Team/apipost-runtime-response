@@ -1,0 +1,37 @@
+{
+  "name": "apipost-runtime-response",
+  "version": "1.0.4",
+  "description": "A module for apipost runtime",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Apipost-Team/apipost-runtime-response.git"
+  },
+  "keywords": [
+    "apipost",
+    "runtime",
+    "postman"
+  ],
+  "author": "apipost-lab001 <admin@apipost.cn> (https://github.com/Apipost-Team)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Apipost-Team/apipost-runtime-response/issues"
+  },
+  "homepage": "https://github.com/Apipost-Team/apipost-runtime-response#readme",
+  "dependencies": {
+    "apipost-grpc": "^0.0.8",
+    "apipost-inside-tools": "^0.1.7",
+    "apipost-runtime": "^1.1.21",
+    "crypto-js": "^4.1.1",
+    "dayjs": "^1.11.5",
+    "fs": "^0.0.1-security",
+    "lodash": "^4.17.21",
+    "protocol-buffers-schema": "^3.6.0",
+    "socket-client-apipost": "^0.0.16",
+    "socket.io": "^4.5.1",
+    "uuid": "^8.3.2"
+  }
+}
