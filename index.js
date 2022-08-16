@@ -269,3 +269,6 @@ async function runtimeResponse(icpEvent, arg) {
     icpEvent.sender.send('runtime_response', ConvertResult('error', String(err)));
   }
 }
+
+module.exports = runtimeResponse;
+module.exports.runtimeResponse = runtimeResponse;
