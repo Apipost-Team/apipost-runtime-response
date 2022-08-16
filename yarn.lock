@@ -505,10 +505,10 @@ apipost-inside-tools@^0.1.2, apipost-inside-tools@^0.1.5, apipost-inside-tools@^
     rollup-plugin-typescript2 "^0.31.2"
     uuid "^8.3.2"
 
-apipost-runtime@^1.1.23:
-  version "1.1.23"
-  resolved "https://registry.yarnpkg.com/apipost-runtime/-/apipost-runtime-1.1.23.tgz#3f28b8a68ea592a09cb09c65323fa5db9888efee"
-  integrity sha512-vwp4f/YK4f6fQ+EXEehghg2uhNF947/Al3tlFD4/eEOAWIo0aCSJYlmBOfvfITu4l3jQcGPK+wTvFimfZTgM1A==
+apipost-runtime@^1.1.24:
+  version "1.1.24"
+  resolved "https://registry.yarnpkg.com/apipost-runtime/-/apipost-runtime-1.1.24.tgz#ed369f08ffef9ff323a8b69ee4c447b6091fdd9b"
+  integrity sha512-esLb4UU3v0dPO/kK+knku+DDTg1f1gWvKMepdb2bdRNuNFtHCT0aW3OqoJdqxn6rarCIhpe+aFYgmGxjTSiQ9w==
   dependencies:
     apipost-inside-tools "^0.1.5"
     apipost-send "^0.0.23"
