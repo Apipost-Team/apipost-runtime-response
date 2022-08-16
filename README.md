@@ -7,7 +7,7 @@ $ npm install apipost-runtime-response
 ```
 
 ##  Usage
-### runder
+### render
 ```javascript
 const {ipcRenderer} = require('electron');
 
