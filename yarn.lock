@@ -505,13 +505,13 @@ apipost-inside-tools@^0.1.2, apipost-inside-tools@^0.1.5, apipost-inside-tools@^
     rollup-plugin-typescript2 "^0.31.2"
     uuid "^8.3.2"
 
-apipost-runtime@^1.1.21:
-  version "1.1.21"
-  resolved "https://registry.yarnpkg.com/apipost-runtime/-/apipost-runtime-1.1.21.tgz#16db29cbc91405fae616fad4acc508b93d5c705a"
-  integrity sha512-LzyANcRbsd7BqmIhxAmQqxY7s6ZCEwZYBuX1z+/h5jlIkAlCuR/6vpp0GMO9wY9kEQBLhLRsKovNo8xkIPIc9w==
+apipost-runtime@^1.1.22:
+  version "1.1.22"
+  resolved "https://registry.yarnpkg.com/apipost-runtime/-/apipost-runtime-1.1.22.tgz#b2e2edfe3abff19181265f46c9bdb70905b5eca2"
+  integrity sha512-z+PTJ9PgB/fLzh1rX4gW3aJaYwlrfkRMoNpakg/5qqSBSg4ZtjET8qHsSZxrA9LaPFJQrUDF76Hx0NSdBG2DAQ==
   dependencies:
     apipost-inside-tools "^0.1.5"
-    apipost-send "^0.0.21"
+    apipost-send "^0.0.22"
     apipost-tools "^0.0.16"
     art-template "^4.13.2"
     atob "^2.1.2"
@@ -542,10 +542,10 @@ apipost-runtime@^1.1.21:
     x2js "^3.4.3"
     zlib "^1.0.5"
 
-apipost-send@^0.0.21:
-  version "0.0.21"
-  resolved "https://registry.yarnpkg.com/apipost-send/-/apipost-send-0.0.21.tgz#713dd1eed5915db6b7d05817363a69b1abc6b5c7"
-  integrity sha512-jJ1I8avfmKzc+AODlhJIf60uTUmijnIcPRjMItvtDNaWXKvq/aQy8BL+BM1SXiOfwcFNHWV31PpTkMl+8IIlqA==
+apipost-send@^0.0.22:
+  version "0.0.22"
+  resolved "https://registry.yarnpkg.com/apipost-send/-/apipost-send-0.0.22.tgz#22da1629baf9f502a84add5f1b0a01fbfd6d16b8"
+  integrity sha512-GZU5gtHV9V9/692mno+G77sWhy311Q7jyv8Tqcygp2lwjvvWOj+4tM+WF5r6jPMAD1HqKSsGhLbL5APTNHwJNA==
   dependencies:
     "@rollup/plugin-node-resolve" "^13.3.0"
     agentkeepalive "^4.2.1"
@@ -582,7 +582,7 @@ apipost-send@^0.0.21:
     rollup-plugin-typescript "^1.0.1"
     rollup-plugin-typescript2 "^0.31.2"
     set-cookie-parser "^2.5.0"
-    strip-json-comments "^5.0.0"
+    strip-json-comments "^3.1.1"
     url-parse "^1.5.10"
     whatwg-mimetype "^3.0.0"
     www-authenticate "^0.6.2"
@@ -2958,15 +2958,10 @@ strip-ansi@^6.0.0, strip-ansi@^6.0.1:
   dependencies:
     ansi-regex "^5.0.1"
 
-strip-json-comments@3.1.1:
+strip-json-comments@3.1.1, strip-json-comments@^3.1.1:
   version "3.1.1"
   resolved "https://registry.yarnpkg.com/strip-json-comments/-/strip-json-comments-3.1.1.tgz#31f1281b3832630434831c310c01cccda8cbe006"
   integrity sha512-6fPc+R4ihwqP6N/aIv2f1gMH8lOVtWQHoqC4yK6oSDVVocumAsfCqjkXnqiYMhmMwS/mEHLp7Vehlt3ql6lEig==
-
-strip-json-comments@^5.0.0:
-  version "5.0.0"
-  resolved "https://registry.yarnpkg.com/strip-json-comments/-/strip-json-comments-5.0.0.tgz#ec101b766476a703031bc607e3c712569de2aa06"
-  integrity sha512-V1LGY4UUo0jgwC+ELQ2BNWfPa17TIuwBLg+j1AA/9RPzKINl1lhxVEu2r+ZTTO8aetIsUzE5Qj6LMSBkoGYKKw==
 
 strnum@^1.0.4:
   version "1.0.5"
