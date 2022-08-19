@@ -459,10 +459,10 @@ ansi-styles@^4.0.0:
   dependencies:
     color-convert "^2.0.1"
 
-apipost-grpc@^0.0.8:
-  version "0.0.8"
-  resolved "https://registry.yarnpkg.com/apipost-grpc/-/apipost-grpc-0.0.8.tgz#0804e58a07317b57bd521decca4962d8cf3a7082"
-  integrity sha512-v7rbrYLsTyyupyrZiKlaMfl68sscdcDXYPyTrhkXlDNLS0oEeNOR1EKPawjyMyDShwXAMUmnQMnAquBoVnJrpQ==
+apipost-grpc@^0.0.9:
+  version "0.0.9"
+  resolved "https://registry.yarnpkg.com/apipost-grpc/-/apipost-grpc-0.0.9.tgz#9e773c7e316dcc62d2cb099319f77875151f1b54"
+  integrity sha512-TDAjcZOVleJtdh3T/HIOnCuW3iTbWtIeSQoRoPThnhxdcbRyBdZGIyW+OE50sldiV7SuewJr7vi8dDFJDmxxpQ==
   dependencies:
     "@grpc/grpc-js" "^1.6.7"
     "@grpc/proto-loader" "^0.6.13"
@@ -505,14 +505,14 @@ apipost-inside-tools@^0.1.2, apipost-inside-tools@^0.1.5, apipost-inside-tools@^
     rollup-plugin-typescript2 "^0.31.2"
     uuid "^8.3.2"
 
-apipost-runtime@^1.1.26:
-  version "1.1.26"
-  resolved "https://registry.yarnpkg.com/apipost-runtime/-/apipost-runtime-1.1.26.tgz#ad110e153a5e12369bf88298e7ca7619468a2a4c"
-  integrity sha512-C1KgwhbGASeAqdk1D7mOv5iHQuTx7jLeQU8ny1GNWFXX2g1Opw3aXHG3Cs2rNyuYu89RRJXvxDoXnHKV7nVaww==
+apipost-runtime@^1.1.27:
+  version "1.1.27"
+  resolved "https://registry.yarnpkg.com/apipost-runtime/-/apipost-runtime-1.1.27.tgz#fbd64a384d6d9c330b232ac8cad8deeb72947957"
+  integrity sha512-15Aw8eyZ0jeww0gPOxUL2r4SycbIG4YwLU5Xy5QI/WlmBBaD8ZWeyCowRjCJjIBIgxv27NUfSk8DUtoDeo4+MQ==
   dependencies:
     apipost-inside-tools "^0.1.5"
-    apipost-send "^0.0.25"
-    apipost-tools "^0.0.16"
+    apipost-send "^0.0.26"
+    apipost-tools "^0.0.19"
     art-template "^4.13.2"
     atob "^2.1.2"
     btoa "^1.2.1"
@@ -543,16 +543,16 @@ apipost-runtime@^1.1.26:
     x2js "^3.4.3"
     zlib "^1.0.5"
 
-apipost-send@^0.0.25:
-  version "0.0.25"
-  resolved "https://registry.yarnpkg.com/apipost-send/-/apipost-send-0.0.25.tgz#2462370add0e90dab5fc62c7d997e79bee426008"
-  integrity sha512-tz+mzBsis5brUKQdO+PD+L5jNKw1FcF1IfeRtf40WVVmUvWocIE7UkNQxRKOGQ8ZUQ38s3V4RwTwuHBjCPtqXw==
+apipost-send@^0.0.26:
+  version "0.0.26"
+  resolved "https://registry.yarnpkg.com/apipost-send/-/apipost-send-0.0.26.tgz#dfdbce0ddd22a2e5265acb796bf4227e62dded04"
+  integrity sha512-rMCL4AU19DOkpWGVyumd/3xvbF7XWDx65C32qiyw2RFfLl8ygVM0Ljs2Ab1R22DHW7R+/AFdrCUg8ODZSsH0Ow==
   dependencies:
     "@rollup/plugin-node-resolve" "^13.3.0"
     agentkeepalive "^4.2.1"
     akamai-edgegrid "^3.2.0"
     apipost-inside-tools "^0.1.2"
-    apipost-tools "^0.0.17"
+    apipost-tools "^0.0.19"
     aws4 "^1.11.0"
     content-disposition "^0.5.4"
     core-js "^3.9.0"
@@ -588,29 +588,10 @@ apipost-send@^0.0.25:
     whatwg-mimetype "^3.0.0"
     www-authenticate "^0.6.2"
 
-apipost-tools@^0.0.16:
-  version "0.0.16"
-  resolved "https://registry.yarnpkg.com/apipost-tools/-/apipost-tools-0.0.16.tgz#b6dff888c9416f723c1b49498a136b0b3a51f809"
-  integrity sha512-LhYBCKW4G5jqvjiL8M3WrY44f5gVlG5CcB45qx4RShri6imuD0muIWWXan+YA0MwF9oDV5ilntln0Es2MEAD9A==
-  dependencies:
-    "@rollup/plugin-node-resolve" "^13.3.0"
-    buffer "^6.0.3"
-    core-js "^3.9.0"
-    html-beautify "^1.0.4"
-    json-bigint "^1.0.0"
-    json5 "^2.2.1"
-    pako "^2.0.4"
-    rollup "^2.74.1"
-    rollup-plugin-commonjs "^10.1.0"
-    rollup-plugin-dts "^4.2.2"
-    rollup-plugin-node-resolve "^5.2.0"
-    rollup-plugin-typescript "^1.0.1"
-    rollup-plugin-typescript2 "^0.31.2"
-
-apipost-tools@^0.0.17:
-  version "0.0.17"
-  resolved "https://registry.yarnpkg.com/apipost-tools/-/apipost-tools-0.0.17.tgz#b9e9c0b4406cc7f72dd06598967eed867595f0c8"
-  integrity sha512-T5hyWFpEootJ1jQQbFyClP+rKBZI/KVzPUlS34wtvdjzkhfg1fm3wKk3+xASlfP1bXZQYO5L+c8xMF9eHBw4YQ==
+apipost-tools@^0.0.19:
+  version "0.0.19"
+  resolved "https://registry.yarnpkg.com/apipost-tools/-/apipost-tools-0.0.19.tgz#e04966b9166c7daee6b7b50750caebba05c92009"
+  integrity sha512-rzCy7reCuNAvYhufPmyK/ToTDwmqDgmUHPQqw6Tz87HmiXHHzKEiH37E7ZmCrN7PyEXnCMIStWAwsyObokSMJA==
   dependencies:
     "@rollup/plugin-node-resolve" "^13.3.0"
     buffer "^6.0.3"
