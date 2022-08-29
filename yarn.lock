@@ -546,14 +546,14 @@ apipost-inside-tools@^0.1.9:
     rollup-plugin-typescript2 "^0.31.2"
     uuid "^8.3.2"
 
-apipost-runtime@^1.1.31:
-  version "1.1.31"
-  resolved "https://registry.yarnpkg.com/apipost-runtime/-/apipost-runtime-1.1.31.tgz#caed2efde625b89c8d1978f8dc4ffb9fb90d4ee0"
-  integrity sha512-a05PXeTZ1KLFaNm/CPkN830PCeOXEWfscIenHo897udVFjxprIszTIxYYBmRTzwUyncnRkX8yvV0w2c0EjdH2A==
+apipost-runtime@^1.1.32:
+  version "1.1.32"
+  resolved "https://registry.yarnpkg.com/apipost-runtime/-/apipost-runtime-1.1.32.tgz#8cf32e71d430e41aec7d1dd700b09d22e119ddf8"
+  integrity sha512-ciUpYNU6iYO016ayKWcjqaxb/7LS+XGu24n11B9vusDePliKTMwJZO+1HSWlaOAmUabi5gcObhrTRcFO67CYSQ==
   dependencies:
     ajax-for-node "^1.0.8"
     apipost-inside-tools "^0.1.9"
-    apipost-send "^0.0.26"
+    apipost-send "^0.0.27"
     apipost-tools "^0.0.20"
     art-template "^4.13.2"
     atob "^2.1.2"
@@ -584,51 +584,6 @@ apipost-runtime@^1.1.31:
     vm2 "^3.9.10"
     x2js "^3.4.3"
     zlib "^1.0.5"
-
-apipost-send@^0.0.26:
-  version "0.0.26"
-  resolved "https://registry.yarnpkg.com/apipost-send/-/apipost-send-0.0.26.tgz#dfdbce0ddd22a2e5265acb796bf4227e62dded04"
-  integrity sha512-rMCL4AU19DOkpWGVyumd/3xvbF7XWDx65C32qiyw2RFfLl8ygVM0Ljs2Ab1R22DHW7R+/AFdrCUg8ODZSsH0Ow==
-  dependencies:
-    "@rollup/plugin-node-resolve" "^13.3.0"
-    agentkeepalive "^4.2.1"
-    akamai-edgegrid "^3.2.0"
-    apipost-inside-tools "^0.1.2"
-    apipost-tools "^0.0.19"
-    aws4 "^1.11.0"
-    content-disposition "^0.5.4"
-    core-js "^3.9.0"
-    crypto "^1.0.1"
-    crypto-js "^4.1.1"
-    file-type "^16.5.3"
-    form-data "^4.0.0"
-    form-urlencoded "^6.0.6"
-    hawk "^9.0.1"
-    httpntlm "^1.7.7"
-    is-base64 "^1.1.0"
-    is-image "^3.0.0"
-    is-svg "^4.3.2"
-    js-base64 "^3.7.2"
-    json-bigint "^1.0.0"
-    json5 "^2.2.1"
-    jsonschema "^1.4.1"
-    lodash "^4.17.21"
-    oauth-1.0a "^2.2.6"
-    pm-event-util "^1.0.2"
-    postman-request "^2.88.1-postman.31"
-    querystring "^0.2.1"
-    rollup "^2.74.1"
-    rollup-plugin-commonjs "^10.1.0"
-    rollup-plugin-copy "^3.4.0"
-    rollup-plugin-dts "^4.2.2"
-    rollup-plugin-node-resolve "^5.2.0"
-    rollup-plugin-typescript "^1.0.1"
-    rollup-plugin-typescript2 "^0.31.2"
-    set-cookie-parser "^2.5.0"
-    strip-json-comments "^3.1.1"
-    url-parse "^1.5.10"
-    whatwg-mimetype "^3.0.0"
-    www-authenticate "^0.6.2"
 
 apipost-send@^0.0.27:
   version "0.0.27"
