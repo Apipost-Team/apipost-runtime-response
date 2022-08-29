@@ -23,8 +23,8 @@
   "homepage": "https://github.com/Apipost-Team/apipost-runtime-response#readme",
   "dependencies": {
     "apipost-grpc": "^0.0.9",
-    "apipost-inside-tools": "^0.1.7",
-    "apipost-runtime": "^1.1.29",
+    "apipost-inside-tools": "^0.1.9",
+    "apipost-runtime": "^1.1.31",
     "crypto-js": "^4.1.1",
     "dayjs": "^1.11.5",
     "fs": "^0.0.1-security",
