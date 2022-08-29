@@ -6,7 +6,7 @@ const grpc = require('apipost-grpc'),
   _ = require('lodash'),
   uuid = require('uuid'),
   dayjs = require('dayjs'),
-  path=require('path'),
+  path = require('path'),
   buffersSchema = require('protocol-buffers-schema'),
   SocketClient = require('socket-client-apipost'),
   { Collection, Runtime } = require('apipost-runtime'),
@@ -258,6 +258,9 @@ async function runtimeResponse(icpEvent, arg) {
               } else {
                 socketClient.send(target_id, message);
               }
+              break;
+            case 'closeAll':
+              socketClient.closeAll();
               break;
             default:
               break;
