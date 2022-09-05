@@ -2822,10 +2822,10 @@ slash@^3.0.0:
   resolved "https://registry.yarnpkg.com/slash/-/slash-3.0.0.tgz#6539be870c165adbd5240220dbe361f1bc4d4634"
   integrity sha512-g9Q1haeby36OSStwb4ntCGGGaKsaVSjQ68fBxoQcutl5fS1vuY18H3wSt3jFyFtrkx+Kz0V1G85A4MyAdDMi2Q==
 
-socket-client-apipost@^0.0.18:
-  version "0.0.18"
-  resolved "https://registry.yarnpkg.com/socket-client-apipost/-/socket-client-apipost-0.0.18.tgz#896dff89906fe7548871c85f287385a32c98f7ce"
-  integrity sha512-fnZNTGWreRtOq54fBekNGDocVWvwv0Nd5SAaMiV4aZY0pBdsj9isgE18SGEThnQevpg4GiPhE1MPcxX7azWqUA==
+socket-client-apipost@^0.0.19:
+  version "0.0.19"
+  resolved "https://registry.yarnpkg.com/socket-client-apipost/-/socket-client-apipost-0.0.19.tgz#53080c55caddb18b863d6f1282e6abd56aefca7d"
+  integrity sha512-a18UHsJlU3d+MkkPqc2Pa/932esk3YtVCa5+D+yrDWzLgwhDmJ1mraaQe9ox7F2UvFKqrciFekCQFR4BhgUrLw==
   dependencies:
     "@rollup/plugin-node-resolve" "^13.3.0"
     bufferutil "^4.0.6"
