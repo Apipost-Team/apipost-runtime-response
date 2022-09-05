@@ -22,15 +22,15 @@
   },
   "homepage": "https://github.com/Apipost-Team/apipost-runtime-response#readme",
   "dependencies": {
-    "apipost-grpc": "^0.0.10",
+    "apipost-grpc": "^0.0.11",
     "apipost-inside-tools": "^0.1.10",
-    "apipost-runtime": "^1.1.34",
+    "apipost-runtime": "^1.1.35",
     "crypto-js": "^4.1.1",
     "dayjs": "^1.11.5",
     "fs": "^0.0.1-security",
     "lodash": "^4.17.21",
     "protocol-buffers-schema": "^3.6.0",
-    "socket-client-apipost": "^0.0.18",
+    "socket-client-apipost": "^0.0.19",
     "socket.io": "^4.5.1",
     "uuid": "^8.3.2"
   }

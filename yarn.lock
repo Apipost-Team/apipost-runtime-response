@@ -479,15 +479,15 @@ ansi-styles@^4.0.0:
   dependencies:
     color-convert "^2.0.1"
 
-apipost-grpc@^0.0.10:
-  version "0.0.10"
-  resolved "https://registry.yarnpkg.com/apipost-grpc/-/apipost-grpc-0.0.10.tgz#adf1fa3183f9b503d20d50de74e1a6a4b2150725"
-  integrity sha512-2G6VfJg7alQm9RsTjCIeWbQReqNvyUBmhyQ3pYRY4oVkVynGdLEsj1rdWvoMuBbaZp5qQWAb8gtVkYKcRe0ORA==
+apipost-grpc@^0.0.11:
+  version "0.0.11"
+  resolved "https://registry.yarnpkg.com/apipost-grpc/-/apipost-grpc-0.0.11.tgz#9f6eb027afffe410fd401ca7679e3138be7a4a45"
+  integrity sha512-zVFwQRo/kzJ3vHXiBvS2u48lPbJV1RhMiGjf6Pb7KfuFZhPPcYO0QaNnlSXJJeW0GMMtTTdJN0x8CHp6ZBWSag==
   dependencies:
     "@grpc/grpc-js" "^1.6.7"
     "@grpc/proto-loader" "^0.6.13"
     "@rollup/plugin-node-resolve" "^13.3.0"
-    apipost-inside-tools "^0.1.2"
+    apipost-inside-tools "^0.1.10"
     core-js "^3.9.0"
     grpc-caller "^0.14.0"
     json5 "^2.2.1"
@@ -546,35 +546,14 @@ apipost-inside-tools@^0.1.2:
     rollup-plugin-typescript2 "^0.31.2"
     uuid "^8.3.2"
 
-apipost-inside-tools@^0.1.9:
-  version "0.1.9"
-  resolved "https://registry.yarnpkg.com/apipost-inside-tools/-/apipost-inside-tools-0.1.9.tgz#9576fa7a4dea30f632c00b863aba52dc061575a5"
-  integrity sha512-CDTKRBeSeDkICiXFC8uD9TaNUd1GO3QvsgiX3018fXVWVhp0mrLXwfkWZO4lE3q2G4htDJtuiGIZ4N1hZGVfjA==
-  dependencies:
-    "@rollup/plugin-node-resolve" "^13.3.0"
-    "@types/uuid" "^8.3.4"
-    apipost-tools "^0.0.20"
-    core-js "^3.9.0"
-    dayjs "^1.11.3"
-    json5 "^2.2.1"
-    lodash "^4.17.21"
-    rollup "^2.74.1"
-    rollup-plugin-commonjs "^10.1.0"
-    rollup-plugin-dts "^4.2.2"
-    rollup-plugin-node-resolve "^5.2.0"
-    rollup-plugin-terser "^7.0.2"
-    rollup-plugin-typescript "^1.0.1"
-    rollup-plugin-typescript2 "^0.31.2"
-    uuid "^8.3.2"
-
-apipost-runtime@^1.1.34:
-  version "1.1.34"
-  resolved "https://registry.yarnpkg.com/apipost-runtime/-/apipost-runtime-1.1.34.tgz#24384e3bad6aadde9ad03bb7ee499e223edc1414"
-  integrity sha512-9zAH12t5geybtJNDjqRbrLhtEK4qGt9lQ5mwHuh7Fecxrki5dDj1Nm/Fr87QvMkKLUiTkDmnbfyZvWZNPbT3gg==
+apipost-runtime@^1.1.35:
+  version "1.1.35"
+  resolved "https://registry.yarnpkg.com/apipost-runtime/-/apipost-runtime-1.1.35.tgz#e83bac1375350f930325af2430cecc50fdc60b96"
+  integrity sha512-38r8Pe0f8HJtWvSHzbYYXI5ZX4GpSLhosOwt/vYM0e4DzThmTVX8Pd7WhotD6W1zlPFjUDT/vjrrFgFaFMWArQ==
   dependencies:
     ajax-for-node "^1.0.8"
-    apipost-inside-tools "^0.1.9"
-    apipost-send "^0.0.27"
+    apipost-inside-tools "^0.1.10"
+    apipost-send "^0.0.28"
     apipost-tools "^0.0.20"
     art-template "^4.13.2"
     atob "^2.1.2"
@@ -582,7 +561,7 @@ apipost-runtime@^1.1.34:
     buffer "^6.0.3"
     chai "^4.3.6"
     chai-apipost "^0.0.3"
-    check-valid-cookie "^1.0.1"
+    check-valid-cookie "^1.0.2"
     cli-table3 "^0.6.2"
     colors "^1.4.0"
     cookie "^0.5.0"
@@ -610,6 +589,51 @@ apipost-send@^0.0.27:
   version "0.0.27"
   resolved "https://registry.yarnpkg.com/apipost-send/-/apipost-send-0.0.27.tgz#df38c6aeb8736ea96f97f5ad0a9d10c690ee05d2"
   integrity sha512-iNqILE6c93vqSK/fKMZ3PVSksEmBf0Q+GI93gQcEw6wkfXFdj6ZWiqtjV5RWzgcVCSrXWHz4LPeRgUyCLqBMQQ==
+  dependencies:
+    "@rollup/plugin-node-resolve" "^13.3.0"
+    agentkeepalive "^4.2.1"
+    akamai-edgegrid "^3.2.0"
+    apipost-inside-tools "^0.1.2"
+    apipost-tools "^0.0.19"
+    aws4 "^1.11.0"
+    content-disposition "^0.5.4"
+    core-js "^3.9.0"
+    crypto "^1.0.1"
+    crypto-js "^4.1.1"
+    file-type "^16.5.3"
+    form-data "^4.0.0"
+    form-urlencoded "^6.0.6"
+    hawk "^9.0.1"
+    httpntlm "^1.7.7"
+    is-base64 "^1.1.0"
+    is-image "^3.0.0"
+    is-svg "^4.3.2"
+    js-base64 "^3.7.2"
+    json-bigint "^1.0.0"
+    json5 "^2.2.1"
+    jsonschema "^1.4.1"
+    lodash "^4.17.21"
+    oauth-1.0a "^2.2.6"
+    pm-event-util "^1.0.2"
+    postman-request "^2.88.1-postman.31"
+    querystring "^0.2.1"
+    rollup "^2.74.1"
+    rollup-plugin-commonjs "^10.1.0"
+    rollup-plugin-copy "^3.4.0"
+    rollup-plugin-dts "^4.2.2"
+    rollup-plugin-node-resolve "^5.2.0"
+    rollup-plugin-typescript "^1.0.1"
+    rollup-plugin-typescript2 "^0.31.2"
+    set-cookie-parser "^2.5.0"
+    strip-json-comments "^3.1.1"
+    url-parse "^1.5.10"
+    whatwg-mimetype "^3.0.0"
+    www-authenticate "^0.6.2"
+
+apipost-send@^0.0.28:
+  version "0.0.28"
+  resolved "https://registry.yarnpkg.com/apipost-send/-/apipost-send-0.0.28.tgz#3a772fb070837a2103d0f3f25ba1f4697ad0cec5"
+  integrity sha512-YrTOW8qbygudEm02RkGSO46KYpuGd/lVkc+3vcTg101w/pY7vJzL08MMN5PVFWwLKWEoMo9d9VnETojJmKq1+g==
   dependencies:
     "@rollup/plugin-node-resolve" "^13.3.0"
     agentkeepalive "^4.2.1"
@@ -944,10 +968,10 @@ check-error@^1.0.2:
   resolved "https://registry.yarnpkg.com/check-error/-/check-error-1.0.2.tgz#574d312edd88bb5dd8912e9286dd6c0aed4aac82"
   integrity sha512-BrgHpW9NURQgzoNyjfq0Wu6VFO6D7IZEmJNdtgNqpzGG8RuNFHt2jQxWlAs4HMe119chBnv+34syEZtc6IhLtA==
 
-check-valid-cookie@^1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/check-valid-cookie/-/check-valid-cookie-1.0.1.tgz#a5024e0a879884fdc06be91c61300e4012fdacb7"
-  integrity sha512-1Wfo0C2in5393HdwMZC2sJ6vIYJ/C9pcIw7qWzL1rhT4aAV07H1TVZ80SAG5iEv0oIEHKJMxXJq0DfMpm4UdFA==
+check-valid-cookie@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/check-valid-cookie/-/check-valid-cookie-1.0.2.tgz#f42ae764cafae498bd93e63d5a2910017332bd50"
+  integrity sha512-rNoY+aavL1t/lDetz/zXZccUKfdxrA2boDuBpFawhi39EeFAKNTYg/r1E1NE1OrqxOSWAQhXLT++G71jlmWCFA==
   dependencies:
     cookie "^0.5.0"
     lodash "^4.17.21"
@@ -2822,10 +2846,10 @@ slash@^3.0.0:
   resolved "https://registry.yarnpkg.com/slash/-/slash-3.0.0.tgz#6539be870c165adbd5240220dbe361f1bc4d4634"
   integrity sha512-g9Q1haeby36OSStwb4ntCGGGaKsaVSjQ68fBxoQcutl5fS1vuY18H3wSt3jFyFtrkx+Kz0V1G85A4MyAdDMi2Q==
 
-socket-client-apipost@^0.0.18:
-  version "0.0.18"
-  resolved "https://registry.yarnpkg.com/socket-client-apipost/-/socket-client-apipost-0.0.18.tgz#896dff89906fe7548871c85f287385a32c98f7ce"
-  integrity sha512-fnZNTGWreRtOq54fBekNGDocVWvwv0Nd5SAaMiV4aZY0pBdsj9isgE18SGEThnQevpg4GiPhE1MPcxX7azWqUA==
+socket-client-apipost@^0.0.19:
+  version "0.0.19"
+  resolved "https://registry.yarnpkg.com/socket-client-apipost/-/socket-client-apipost-0.0.19.tgz#53080c55caddb18b863d6f1282e6abd56aefca7d"
+  integrity sha512-a18UHsJlU3d+MkkPqc2Pa/932esk3YtVCa5+D+yrDWzLgwhDmJ1mraaQe9ox7F2UvFKqrciFekCQFR4BhgUrLw==
   dependencies:
     "@rollup/plugin-node-resolve" "^13.3.0"
     bufferutil "^4.0.6"
