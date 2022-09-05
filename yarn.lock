@@ -479,10 +479,10 @@ ansi-styles@^4.0.0:
   dependencies:
     color-convert "^2.0.1"
 
-apipost-grpc@^0.0.11:
-  version "0.0.11"
-  resolved "https://registry.yarnpkg.com/apipost-grpc/-/apipost-grpc-0.0.11.tgz#9f6eb027afffe410fd401ca7679e3138be7a4a45"
-  integrity sha512-zVFwQRo/kzJ3vHXiBvS2u48lPbJV1RhMiGjf6Pb7KfuFZhPPcYO0QaNnlSXJJeW0GMMtTTdJN0x8CHp6ZBWSag==
+apipost-grpc@^0.0.12:
+  version "0.0.12"
+  resolved "https://registry.yarnpkg.com/apipost-grpc/-/apipost-grpc-0.0.12.tgz#e7688c8ff450b5a69d4327fafdfe28ed1dd99d09"
+  integrity sha512-LpOd+9llIFmvQWWR0BNF9Amf19dhiMrUYAGI6FeGxchLa3D9mMZfNRGxQ6Gfj7o4XxLF2yM+AomWMdWag9TyDw==
   dependencies:
     "@grpc/grpc-js" "^1.6.7"
     "@grpc/proto-loader" "^0.6.13"
