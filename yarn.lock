@@ -546,14 +546,14 @@ apipost-inside-tools@^0.1.2:
     rollup-plugin-typescript2 "^0.31.2"
     uuid "^8.3.2"
 
-apipost-runtime@^1.1.36:
-  version "1.1.36"
-  resolved "https://registry.yarnpkg.com/apipost-runtime/-/apipost-runtime-1.1.36.tgz#b0ebd9b37a9006243cdd128db1e52909f650636b"
-  integrity sha512-U3+YLng0EbckyPwvmkNU6DWAKmVXvotlL7tIGifClt8YQFcFpjY4LcY/S6tgHuNh0OFBbEk6B8Jv7uDmdvnmxA==
+apipost-runtime@^1.1.37:
+  version "1.1.37"
+  resolved "https://registry.yarnpkg.com/apipost-runtime/-/apipost-runtime-1.1.37.tgz#c8b39790fe2ea83f644839dcee8828eb49224a07"
+  integrity sha512-u4JpqFKcYNQpE44j2aAuFww4LF//gWNqAtLjuX8xefgjC7yPcWNxX3+4tIVbYdspfgXx2b5ZiBsUhriJUPB18g==
   dependencies:
     ajax-for-node "^1.0.8"
     apipost-inside-tools "^0.1.10"
-    apipost-send "^0.0.28"
+    apipost-send "^0.0.29"
     apipost-tools "^0.0.20"
     art-template "^4.13.2"
     atob "^2.1.2"
@@ -630,10 +630,10 @@ apipost-send@^0.0.27:
     whatwg-mimetype "^3.0.0"
     www-authenticate "^0.6.2"
 
-apipost-send@^0.0.28:
-  version "0.0.28"
-  resolved "https://registry.yarnpkg.com/apipost-send/-/apipost-send-0.0.28.tgz#3a772fb070837a2103d0f3f25ba1f4697ad0cec5"
-  integrity sha512-YrTOW8qbygudEm02RkGSO46KYpuGd/lVkc+3vcTg101w/pY7vJzL08MMN5PVFWwLKWEoMo9d9VnETojJmKq1+g==
+apipost-send@^0.0.29:
+  version "0.0.29"
+  resolved "https://registry.yarnpkg.com/apipost-send/-/apipost-send-0.0.29.tgz#e514794417a3ae5b0b84a1468a7241ffd3f1aaff"
+  integrity sha512-TcTFpdHfwWUvgCIt0J8taTr7PcTvWs2/q1PDj4qsa6owtJGKMm00jZKSlZlwUAaQ9H0AegzWudx4XUZlVwik/w==
   dependencies:
     "@rollup/plugin-node-resolve" "^13.3.0"
     agentkeepalive "^4.2.1"
