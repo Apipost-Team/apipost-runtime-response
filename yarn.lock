@@ -479,10 +479,10 @@ ansi-styles@^4.0.0:
   dependencies:
     color-convert "^2.0.1"
 
-apipost-grpc@^0.0.12:
-  version "0.0.12"
-  resolved "https://registry.yarnpkg.com/apipost-grpc/-/apipost-grpc-0.0.12.tgz#e7688c8ff450b5a69d4327fafdfe28ed1dd99d09"
-  integrity sha512-LpOd+9llIFmvQWWR0BNF9Amf19dhiMrUYAGI6FeGxchLa3D9mMZfNRGxQ6Gfj7o4XxLF2yM+AomWMdWag9TyDw==
+apipost-grpc@^0.0.13:
+  version "0.0.13"
+  resolved "https://registry.yarnpkg.com/apipost-grpc/-/apipost-grpc-0.0.13.tgz#4881d1287e4dd5e188e860883c057b97e4898585"
+  integrity sha512-yRIpNnv3MEb3GFReZUvbRa+wDS7FFR1GZVIKTsModtPas1roH4NV3rtcEIKB7EHR89yuDf3cFEy0Jr4swhsY7g==
   dependencies:
     "@grpc/grpc-js" "^1.6.7"
     "@grpc/proto-loader" "^0.6.13"
@@ -546,10 +546,10 @@ apipost-inside-tools@^0.1.2:
     rollup-plugin-typescript2 "^0.31.2"
     uuid "^8.3.2"
 
-apipost-runtime@^1.1.37:
-  version "1.1.37"
-  resolved "https://registry.yarnpkg.com/apipost-runtime/-/apipost-runtime-1.1.37.tgz#c8b39790fe2ea83f644839dcee8828eb49224a07"
-  integrity sha512-u4JpqFKcYNQpE44j2aAuFww4LF//gWNqAtLjuX8xefgjC7yPcWNxX3+4tIVbYdspfgXx2b5ZiBsUhriJUPB18g==
+apipost-runtime@^1.1.38:
+  version "1.1.38"
+  resolved "https://registry.yarnpkg.com/apipost-runtime/-/apipost-runtime-1.1.38.tgz#dff83e9d9bbc5ac58157e668ce96b6966dd951b9"
+  integrity sha512-s6Mp6gMW3aldZjjEbnAaBLqKl1PMI4xm2isTOE8gEqKm1IuGhC4+kHz/XkVgPpSMUjubVL3e1dKvwZ2kXfsqPA==
   dependencies:
     ajax-for-node "^1.0.8"
     apipost-inside-tools "^0.1.10"
