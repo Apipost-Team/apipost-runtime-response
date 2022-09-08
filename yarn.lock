@@ -479,10 +479,10 @@ ansi-styles@^4.0.0:
   dependencies:
     color-convert "^2.0.1"
 
-apipost-grpc@^0.0.13:
-  version "0.0.13"
-  resolved "https://registry.yarnpkg.com/apipost-grpc/-/apipost-grpc-0.0.13.tgz#4881d1287e4dd5e188e860883c057b97e4898585"
-  integrity sha512-yRIpNnv3MEb3GFReZUvbRa+wDS7FFR1GZVIKTsModtPas1roH4NV3rtcEIKB7EHR89yuDf3cFEy0Jr4swhsY7g==
+apipost-grpc@^0.0.14:
+  version "0.0.14"
+  resolved "https://registry.yarnpkg.com/apipost-grpc/-/apipost-grpc-0.0.14.tgz#f79da0dc0cb35a2a51c7df5e2b303e8971c3179a"
+  integrity sha512-18BC/4+ZC0Yy3HzttqcVleXcf31kZEgMQKFZXYf4jPDzo3j30VTDcXfWMXu0HqxMd0fXPZjyY1FhcBBx3IOQMg==
   dependencies:
     "@grpc/grpc-js" "^1.6.7"
     "@grpc/proto-loader" "^0.6.13"
@@ -546,10 +546,10 @@ apipost-inside-tools@^0.1.2:
     rollup-plugin-typescript2 "^0.31.2"
     uuid "^8.3.2"
 
-apipost-runtime@^1.1.38:
-  version "1.1.38"
-  resolved "https://registry.yarnpkg.com/apipost-runtime/-/apipost-runtime-1.1.38.tgz#dff83e9d9bbc5ac58157e668ce96b6966dd951b9"
-  integrity sha512-s6Mp6gMW3aldZjjEbnAaBLqKl1PMI4xm2isTOE8gEqKm1IuGhC4+kHz/XkVgPpSMUjubVL3e1dKvwZ2kXfsqPA==
+apipost-runtime@^1.1.40:
+  version "1.1.40"
+  resolved "https://registry.yarnpkg.com/apipost-runtime/-/apipost-runtime-1.1.40.tgz#a44978117528f7f37a8a0b83e1e2b1032979e84c"
+  integrity sha512-klCsrrD687cyWKtDbenteIWIPT40d8yLgULoxrXvTybUvYzVoj65eHRSGRknvFMEw2GKgknEU/QB9EzZ398bhg==
   dependencies:
     ajax-for-node "^1.0.8"
     apipost-inside-tools "^0.1.10"
@@ -569,6 +569,7 @@ apipost-runtime@^1.1.38:
     dayjs "^1.11.4"
     jquery "^3.6.0"
     jsdom "^20.0.0"
+    jsencrypt-node "^1.0.4"
     json-bigint "^1.0.0"
     json5 "^2.2.1"
     jsonpath "^1.1.1"
@@ -2061,6 +2062,11 @@ jsdom@^20.0.0:
     whatwg-url "^11.0.0"
     ws "^8.8.0"
     xml-name-validator "^4.0.0"
+
+jsencrypt-node@^1.0.4:
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/jsencrypt-node/-/jsencrypt-node-1.0.4.tgz#d04dc99f901237f2761d9e9ce35195a371207ead"
+  integrity sha512-5UrA9tZhicXTJPcYCrZu75nxnvmq8uqiFkyk874wKnvNOcglnzh4YQgJcOkLU22b8BiBP4sE/Cb7nFO3NB5isA==
 
 json-bigint@^1.0.0:
   version "1.0.0"
