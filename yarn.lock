@@ -479,10 +479,10 @@ ansi-styles@^4.0.0:
   dependencies:
     color-convert "^2.0.1"
 
-apipost-grpc@^0.0.14:
-  version "0.0.14"
-  resolved "https://registry.yarnpkg.com/apipost-grpc/-/apipost-grpc-0.0.14.tgz#f79da0dc0cb35a2a51c7df5e2b303e8971c3179a"
-  integrity sha512-18BC/4+ZC0Yy3HzttqcVleXcf31kZEgMQKFZXYf4jPDzo3j30VTDcXfWMXu0HqxMd0fXPZjyY1FhcBBx3IOQMg==
+apipost-grpc@^0.0.15:
+  version "0.0.15"
+  resolved "https://registry.yarnpkg.com/apipost-grpc/-/apipost-grpc-0.0.15.tgz#0bb17ddaef340c71e56f7407c4fe6bea9453c6c9"
+  integrity sha512-ybIYiXg/CpjluqKwpmv05AEyAocaHLUKRlk2vEFTypH+Rq4UmPrwbFIgRSB2Ty/0WXOmdtolXhpKtQdK6lzN6A==
   dependencies:
     "@grpc/grpc-js" "^1.6.7"
     "@grpc/proto-loader" "^0.6.13"
@@ -546,10 +546,10 @@ apipost-inside-tools@^0.1.2:
     rollup-plugin-typescript2 "^0.31.2"
     uuid "^8.3.2"
 
-apipost-runtime@^1.1.42:
-  version "1.1.42"
-  resolved "https://registry.yarnpkg.com/apipost-runtime/-/apipost-runtime-1.1.42.tgz#ef2ad6a796bf46ebacb6420f1b936b535b752ad3"
-  integrity sha512-3pqtvPmxyfhQGGQRuX/f1MvinSKqen2dSOcql4HIDVxQMMAEHmMdGo++ilblVKlQhjVs2eC/WT2fR8C3CzIt/w==
+apipost-runtime@^1.1.43:
+  version "1.1.43"
+  resolved "https://registry.yarnpkg.com/apipost-runtime/-/apipost-runtime-1.1.43.tgz#66819bcef07ef0457c9c094400ba81f2f4cf8c19"
+  integrity sha512-F9DC3uFv8gk+XONKVAOTz9jcwPxoDfYjwZls1qIh5USDIGJamHzu/+JTazuGeEAuZn3xkfMyfNHpXFVVeSGGQw==
   dependencies:
     ajax-for-node "^1.0.8"
     apipost-inside-tools "^0.1.10"
@@ -2852,10 +2852,10 @@ slash@^3.0.0:
   resolved "https://registry.yarnpkg.com/slash/-/slash-3.0.0.tgz#6539be870c165adbd5240220dbe361f1bc4d4634"
   integrity sha512-g9Q1haeby36OSStwb4ntCGGGaKsaVSjQ68fBxoQcutl5fS1vuY18H3wSt3jFyFtrkx+Kz0V1G85A4MyAdDMi2Q==
 
-socket-client-apipost@^0.0.19:
-  version "0.0.19"
-  resolved "https://registry.yarnpkg.com/socket-client-apipost/-/socket-client-apipost-0.0.19.tgz#53080c55caddb18b863d6f1282e6abd56aefca7d"
-  integrity sha512-a18UHsJlU3d+MkkPqc2Pa/932esk3YtVCa5+D+yrDWzLgwhDmJ1mraaQe9ox7F2UvFKqrciFekCQFR4BhgUrLw==
+socket-client-apipost@^0.0.20:
+  version "0.0.20"
+  resolved "https://registry.yarnpkg.com/socket-client-apipost/-/socket-client-apipost-0.0.20.tgz#43735d134daeb24cd0a9e6954814ed07fcb5ed2d"
+  integrity sha512-UZMLe4rh+b/1iItNiVMAq4+uFTq0fnFeMFPobTNeyLMnircpCCZIYQ6Zu7Vqzo9C/XMJPAEufadaBFD7oXC/2w==
   dependencies:
     "@rollup/plugin-node-resolve" "^13.3.0"
     bufferutil "^4.0.6"
