@@ -44,6 +44,9 @@ async function runtimeResponse(icpEvent, arg) {
         case 'runner':
           // 发送 RuntimeEvent 消息函数
           const emitRuntimeEvent = function (msg) {
+            if (msg?.action == 'console' && msg?.method == 'log' && _.has(msg, 'message.data')) { // fix bug
+              msg.message.data = JSON.stringify(msg.message.data);
+            }
             icpEvent.sender.send('runtime_response', ConvertResult('success', 'success', msg));
           };
 
