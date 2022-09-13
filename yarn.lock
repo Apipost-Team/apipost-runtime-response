@@ -421,23 +421,24 @@ agentkeepalive@^4.2.1:
     depd "^1.1.2"
     humanize-ms "^1.2.1"
 
-ajax-for-node@^1.0.8:
-  version "1.0.8"
-  resolved "https://registry.yarnpkg.com/ajax-for-node/-/ajax-for-node-1.0.8.tgz#770f8bc2f30384d95bd26c5b2199f50861e388cd"
-  integrity sha512-WgqVREf+WeHOS5L0DgIDlOkZ01yyc94bp3egU2ebb6yoaNjL0zi1ZchRdgnhvVi6oXSwuQuB0uBwVtUaG8y9nQ==
+ajax-for-node@^1.0.9:
+  version "1.0.9"
+  resolved "https://registry.yarnpkg.com/ajax-for-node/-/ajax-for-node-1.0.9.tgz#368bf59bf4acfe5e853eff3360735c4a08b17203"
+  integrity sha512-BeU27EjIcm0oMDrKu+648Dg3rEM6oXM3AZo0QKLpvqoJTaNa0kHOvkzY82MkId/T63fwK+wd09BrsgjeOXdI/Q==
   dependencies:
-    ajax2apipost "^1.0.4"
-    apipost-send "^0.0.27"
+    ajax2apipost "^1.0.5"
+    apipost-send "^0.0.31"
     apipost-tools "^0.0.20"
     json5 "^2.2.1"
     lodash "^4.17.21"
 
-ajax2apipost@^1.0.4:
-  version "1.0.4"
-  resolved "https://registry.yarnpkg.com/ajax2apipost/-/ajax2apipost-1.0.4.tgz#9b4844d283d090c20956117611871bab5aeda37b"
-  integrity sha512-y7uaUi69G3UKDu/dz1qZax2bDOP37Q5gCk4eeZE/zTI/UN1ej/rQLvlWJEyzd8G4j9bEgawpyI3OkSK2nfTg8Q==
+ajax2apipost@^1.0.5:
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/ajax2apipost/-/ajax2apipost-1.0.5.tgz#170f10cd26a7fc6406b4d1b67fdb718c2ab81ad3"
+  integrity sha512-KQx1dAmoPM/fyVb7EijtnMc2Q9Dg1uC55z9tm7CZ1OkBkyAmqGiMC6i08f74EToQi/D27fV4OF4ZP1ciSpnCNA==
   dependencies:
     apipost-tools "^0.0.20"
+    form-data "^4.0.0"
     lodash "^4.17.21"
     uuid "^8.3.2"
 
@@ -546,14 +547,14 @@ apipost-inside-tools@^0.1.2:
     rollup-plugin-typescript2 "^0.31.2"
     uuid "^8.3.2"
 
-apipost-runtime@^1.1.43:
-  version "1.1.43"
-  resolved "https://registry.yarnpkg.com/apipost-runtime/-/apipost-runtime-1.1.43.tgz#66819bcef07ef0457c9c094400ba81f2f4cf8c19"
-  integrity sha512-F9DC3uFv8gk+XONKVAOTz9jcwPxoDfYjwZls1qIh5USDIGJamHzu/+JTazuGeEAuZn3xkfMyfNHpXFVVeSGGQw==
+apipost-runtime@^1.1.44:
+  version "1.1.44"
+  resolved "https://registry.yarnpkg.com/apipost-runtime/-/apipost-runtime-1.1.44.tgz#d1cf18d51628b9face7d54c08f159d6ee47f2dc0"
+  integrity sha512-GWwZcX4GdYeGQ7y9a9F/oMYCCzh9Zutj68N/QAxN28zPpmcANiWfpmMJuhuzb7Ci0M72NZj7yA75Qurun/VgPA==
   dependencies:
-    ajax-for-node "^1.0.8"
+    ajax-for-node "^1.0.9"
     apipost-inside-tools "^0.1.10"
-    apipost-send "^0.0.30"
+    apipost-send "^0.0.32"
     apipost-tools "^0.0.20"
     art-template "^4.13.2"
     atob "^2.1.2"
@@ -586,10 +587,10 @@ apipost-runtime@^1.1.43:
     x2js "^3.4.3"
     zlib "^1.0.5"
 
-apipost-send@^0.0.27:
-  version "0.0.27"
-  resolved "https://registry.yarnpkg.com/apipost-send/-/apipost-send-0.0.27.tgz#df38c6aeb8736ea96f97f5ad0a9d10c690ee05d2"
-  integrity sha512-iNqILE6c93vqSK/fKMZ3PVSksEmBf0Q+GI93gQcEw6wkfXFdj6ZWiqtjV5RWzgcVCSrXWHz4LPeRgUyCLqBMQQ==
+apipost-send@^0.0.31:
+  version "0.0.31"
+  resolved "https://registry.yarnpkg.com/apipost-send/-/apipost-send-0.0.31.tgz#5eae55a5ad620a9989d6da1bc86ecab9138fb896"
+  integrity sha512-YmcE9bHWYcePP1oJxpEApQk/kPogE1VmGQhJ6IXJwggD+KSrl9LzWnuTG4rTLBpmU7qhrAWQpXQKc9vb8I5OWQ==
   dependencies:
     "@rollup/plugin-node-resolve" "^13.3.0"
     agentkeepalive "^4.2.1"
@@ -631,10 +632,10 @@ apipost-send@^0.0.27:
     whatwg-mimetype "^3.0.0"
     www-authenticate "^0.6.2"
 
-apipost-send@^0.0.30:
-  version "0.0.30"
-  resolved "https://registry.yarnpkg.com/apipost-send/-/apipost-send-0.0.30.tgz#e8e0ed2d85f81a4942fe2b278ffdd18656b76c68"
-  integrity sha512-5eWnH10oWDcSjYF1wKMRMrCsbQ3UbuZxY9PLcE6tm2T7JzCyByMwkrYmiXhU2Nr+eLrh3T7vzIftshMsG0M2Lw==
+apipost-send@^0.0.32:
+  version "0.0.32"
+  resolved "https://registry.yarnpkg.com/apipost-send/-/apipost-send-0.0.32.tgz#951c3ad740517ffd7d0740c0fdd869e674b61e13"
+  integrity sha512-PFRSTa+w5j++1RdRbLVsXZMfQ8OiJW3EZWkA03FhWrNI9WNogpe79h92dD5rB4aRVlCxVMixPIPq4Yi44z8z9w==
   dependencies:
     "@rollup/plugin-node-resolve" "^13.3.0"
     agentkeepalive "^4.2.1"

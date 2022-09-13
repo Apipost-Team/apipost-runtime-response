@@ -24,7 +24,7 @@
   "dependencies": {
     "apipost-grpc": "^0.0.15",
     "apipost-inside-tools": "^0.1.10",
-    "apipost-runtime": "^1.1.43",
+    "apipost-runtime": "^1.1.44",
     "crypto-js": "^4.1.1",
     "dayjs": "^1.11.5",
     "fs": "^0.0.1-security",
