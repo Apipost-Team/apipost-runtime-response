@@ -61,14 +61,15 @@ async function runtimeResponse(icpEvent, arg) {
             _scene = 'auto_test';
           }
 
-          if (RUNNER_RUNTIME_SCENES[runtime_id]) {
-            if (RUNNER_RUNTIME_SCENES[runtime_id] == 'auto_test' && _scene == 'auto_test') {
-              icpEvent.sender.send('runner_response', {
-                runtime_id,
-                status: 'ERROR',
-                message: `当前正在执行任务 ${RUNNER_REPORT_IDS[runtime_id]}, 请结束后再执行其他任务`,
-              });
-            }
+          // fix bug
+          if (RUNNER_RUNTIME_SCENES[runtime_id] && RUNNER_RUNTIME_SCENES[runtime_id] == 'auto_test' && _scene == 'auto_test') {
+            // if (RUNNER_RUNTIME_SCENES[runtime_id] == 'auto_test' && _scene == 'auto_test') {
+            icpEvent.sender.send('runner_response', {
+              runtime_id,
+              status: 'ERROR',
+              message: `当前正在执行任务 ${RUNNER_REPORT_IDS[runtime_id]}, 请结束后再执行其他任务`,
+            });
+            // }
           } else {
             const myCollection = new Collection(test_events, { iterationCount: option.iterationCount });
             RUNNER_RUNTIME_SCENES[runtime_id] = _scene;
