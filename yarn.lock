@@ -547,22 +547,23 @@ apipost-inside-tools@^0.1.2:
     rollup-plugin-typescript2 "^0.31.2"
     uuid "^8.3.2"
 
-apipost-runtime@^1.1.48:
-  version "1.1.48"
-  resolved "https://registry.yarnpkg.com/apipost-runtime/-/apipost-runtime-1.1.48.tgz#09ac8560d9198dec910891963af3add825b46573"
-  integrity sha512-mFKv05cwt2KgKDp7HeWyjIV7t2LvduHdEHf1cHU9gB5pS6dh/w7tPFjGuEQvEkS5vsQc51K/OGusmet5qCGMQA==
+apipost-runtime@^1.1.49:
+  version "1.1.49"
+  resolved "https://registry.yarnpkg.com/apipost-runtime/-/apipost-runtime-1.1.49.tgz#9720271c601fc5707c87d57f1a3e328bd5fd3f24"
+  integrity sha512-fPdPGaIXRLRwwd5hwkbWnfioHl8HzMWzdTYpstiEfI1ZuEEZ4W/NEYP7TpSYkuHR4WWHRaY4vLTWkQRtuBJANw==
   dependencies:
     ajax-for-node "^1.0.9"
     apipost-inside-tools "^0.1.10"
     apipost-send "^0.0.33"
     apipost-tools "^0.0.20"
     art-template "^4.13.2"
+    async "^3.2.4"
     atob "^2.1.2"
     btoa "^1.2.1"
     buffer "^6.0.3"
     chai "^4.3.6"
     chai-apipost "^0.0.3"
-    check-valid-cookie "^1.0.2"
+    check-valid-cookie "^1.0.3"
     cli-table3 "^0.6.2"
     colors "^1.4.0"
     cookie "^0.5.0"
@@ -777,7 +778,7 @@ assertion-error@^1.1.0:
   resolved "https://registry.yarnpkg.com/assertion-error/-/assertion-error-1.1.0.tgz#e60b6b0e8f301bd97e5375215bda406c85118c0b"
   integrity sha512-jgsaNduz+ndvGyFt3uSuWqvy4lCnIJiovtouQN5JZHOKCS2QuhEdbcQHFhVksz2N2U9hXJo8odG7ETyWlEeuDw==
 
-async@^3.1.0:
+async@^3.1.0, async@^3.2.4:
   version "3.2.4"
   resolved "https://registry.yarnpkg.com/async/-/async-3.2.4.tgz#2d22e00f8cddeb5fde5dd33522b56d1cf569a81c"
   integrity sha512-iAB+JbDEGXhyIUavoDl9WP/Jj106Kz9DEn1DPgYw5ruDn0e3Wgi3sKFm55sASdGBNOQB8F59d9qQ7deqrHA8wQ==
@@ -971,10 +972,10 @@ check-error@^1.0.2:
   resolved "https://registry.yarnpkg.com/check-error/-/check-error-1.0.2.tgz#574d312edd88bb5dd8912e9286dd6c0aed4aac82"
   integrity sha512-BrgHpW9NURQgzoNyjfq0Wu6VFO6D7IZEmJNdtgNqpzGG8RuNFHt2jQxWlAs4HMe119chBnv+34syEZtc6IhLtA==
 
-check-valid-cookie@^1.0.2:
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/check-valid-cookie/-/check-valid-cookie-1.0.2.tgz#f42ae764cafae498bd93e63d5a2910017332bd50"
-  integrity sha512-rNoY+aavL1t/lDetz/zXZccUKfdxrA2boDuBpFawhi39EeFAKNTYg/r1E1NE1OrqxOSWAQhXLT++G71jlmWCFA==
+check-valid-cookie@^1.0.3:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/check-valid-cookie/-/check-valid-cookie-1.0.3.tgz#2f887eae88d25ca6a85cfb197a62dcfc6bf40528"
+  integrity sha512-KcNF9CPkJW0/ouH+/2wOHpQAp2RMXQgIFXL0BET1OOQMTZacsQf6fizz0QEPkvXINAIwMH8Cqc2iCnEQFBy08Q==
   dependencies:
     cookie "^0.5.0"
     lodash "^4.17.21"
