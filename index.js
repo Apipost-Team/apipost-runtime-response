@@ -71,7 +71,7 @@ async function runtimeResponse(icpEvent, arg) {
             });
             // }
           } else {
-            const myCollection = new Collection(test_events, { iterationCount: option.iterationCount });
+            const myCollection = new Collection(test_events, { iterationCount: option.iterationCount, sleep: option.sleep });
             RUNNER_RUNTIME_SCENES[runtime_id] = _scene;
             RUNNER_RUNTIME[runtime_id] = new Runtime(emitRuntimeEvent);
             RUNNER_REPORT_IDS[runtime_id] = uuid.v4();
