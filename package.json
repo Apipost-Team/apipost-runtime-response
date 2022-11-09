@@ -21,7 +21,7 @@
     "url": "https://github.com/Apipost-Team/apipost-runtime-response/issues"
   },
   "homepage": "https://github.com/Apipost-Team/apipost-runtime-response#readme",
-  "dependencies": {
+  "peerDependencies": {
     "apipost-grpc": "^0.0.15",
     "apipost-inside-tools": "^0.1.10",
     "apipost-runtime": "^1.1.50",
