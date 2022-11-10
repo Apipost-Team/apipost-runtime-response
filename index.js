@@ -76,6 +76,16 @@ async function runtimeResponse(icpEvent, arg) {
             RUNNER_RUNTIME[runtime_id] = new Runtime(emitRuntimeEvent);
             RUNNER_REPORT_IDS[runtime_id] = uuid.v4();
 
+
+            //fix bug url带中有中文处理
+            if(_.isArray(option?.collection)){
+              option?.collection.forEach((item,itemIndex)=>{
+                if(_.isString(item?.request.url)){
+                  const encodeURIStr=encodeURI(item.request.url);
+                  _.set(option,'collection['+itemIndex+'].request.url',encodeURIStr);
+                }
+              })
+            }
             _.set(option, 'RUNNER_REPORT_ID', RUNNER_REPORT_IDS[runtime_id]);
             await RUNNER_RUNTIME[runtime_id].run(myCollection.definition, option);
 
