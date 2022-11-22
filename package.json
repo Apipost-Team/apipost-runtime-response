@@ -30,7 +30,7 @@
     "fs": "^0.0.1-security",
     "lodash": "^4.17.21",
     "protocol-buffers-schema": "^3.6.0",
-    "socket-client-apipost": "^0.0.20",
+    "socket-client-apipost": "^0.0.21",
     "socket.io": "^4.5.1",
     "uuid": "^8.3.2"
   },
