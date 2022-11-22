@@ -1,6 +1,6 @@
 {
   "name": "apipost-runtime-response",
-  "version": "1.0.27",
+  "version": "1.0.37",
   "description": "A module for apipost runtime",
   "main": "index.js",
   "scripts": {
@@ -22,9 +22,9 @@
   },
   "homepage": "https://github.com/Apipost-Team/apipost-runtime-response#readme",
   "dependencies": {
-    "apipost-grpc": "^0.0.15",
+    "apipost-grpc": "^0.0.16",
     "apipost-inside-tools": "^0.1.10",
-    "apipost-runtime": "^1.1.50",
+    "apipost-runtime": "^1.1.56",
     "crypto-js": "^4.1.1",
     "dayjs": "^1.11.5",
     "fs": "^0.0.1-security",
@@ -33,5 +33,13 @@
     "socket-client-apipost": "^0.0.20",
     "socket.io": "^4.5.1",
     "uuid": "^8.3.2"
+  },
+  "peerDependencies": {
+    "apipost-grpc": ">=0.0.15",
+    "apipost-inside-tools": ">=0.1.10",
+    "apipost-runtime": ">=1.1.50",
+    "dayjs": ">=1.11.5",
+    "lodash": ">=4.17.21",
+    "uuid": ">=8.3.2"
   }
 }

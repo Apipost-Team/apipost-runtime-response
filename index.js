@@ -47,7 +47,7 @@ async function runtimeResponse(icpEvent, arg) {
             if (msg?.action == 'console' && msg?.method == 'log' && _.has(msg, 'message.data')) { // fix bug
               msg.message.data = JSON.stringify(msg.message.data);
             }
-            icpEvent.sender.send('runtime_response', ConvertResult('success', 'success', msg));
+            icpEvent.sender.send('runtime_response', ConvertResult('success', 'success', _.cloneDeep(msg)));
           };
 
           var { test_events, option } = chunk;
@@ -71,11 +71,22 @@ async function runtimeResponse(icpEvent, arg) {
             });
             // }
           } else {
-            const myCollection = new Collection(test_events, { iterationCount: option.iterationCount });
+            const myCollection = new Collection(test_events, { iterationCount: option.iterationCount, sleep: option.sleep });
             RUNNER_RUNTIME_SCENES[runtime_id] = _scene;
             RUNNER_RUNTIME[runtime_id] = new Runtime(emitRuntimeEvent);
             RUNNER_REPORT_IDS[runtime_id] = uuid.v4();
 
+
+            // //fix bug url带中有中文处理
+            // if(_.isArray(option?.collection)){
+            //   option?.collection.forEach((item,itemIndex)=>{
+            //     if(_.isString(item?.request.url)){
+            //       const encodeURIStr=encodeURI(item.request.url);
+            //       _.set(option,'collection['+itemIndex+'].request.url',encodeURIStr);
+            //     }
+            //   })
+            // }
+            //console.log(myCollection.definition,'rutime inner data.definition--------');
             _.set(option, 'RUNNER_REPORT_ID', RUNNER_REPORT_IDS[runtime_id]);
             await RUNNER_RUNTIME[runtime_id].run(myCollection.definition, option);
 
