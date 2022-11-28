@@ -512,14 +512,14 @@ apipost-inside-tools@^0.1.2:
     rollup-plugin-typescript2 "^0.31.2"
     uuid "^8.3.2"
 
-apipost-runtime@^1.1.56:
-  version "1.1.57"
-  resolved "https://registry.yarnpkg.com/apipost-runtime/-/apipost-runtime-1.1.57.tgz#8101f1ad2aa4dfb2cfdf76cdc507c05a5feadcf1"
-  integrity sha512-/xpyZ4c85Stl7rZ0tK0tnU/sfpKwwjE3VIJAMFD6Azdnkh4NRKtTAVhMulzmaouT5ThOPmIkfNYDQ2c6skOw+g==
+apipost-runtime@^1.1.61:
+  version "1.1.61"
+  resolved "https://registry.yarnpkg.com/apipost-runtime/-/apipost-runtime-1.1.61.tgz#59e5f13d80139cd679289b3116d8130c001d3328"
+  integrity sha512-qGnTvO/F9TS/4jBaqIFQndNvi3IYUI7mBtxI3mvlsaiFFj1B0ucj5khLnysPlEEmNP1bvD8V1gYhErLA6IXxDQ==
   dependencies:
     ajax-for-node "^1.0.9"
     apipost-inside-tools "^0.1.10"
-    apipost-send "^0.0.35"
+    apipost-send "^0.0.38"
     apipost-tools "^0.0.20"
     art-template "^4.13.2"
     async "^3.2.4"
@@ -541,8 +541,10 @@ apipost-runtime@^1.1.56:
     mockjs "^1.1.0"
     moment "^2.29.4"
     rollup-plugin-commonjs "^10.1.0"
+    sm-crypto "^0.3.11"
     strip-json-comments "3.1.1"
     url-join "4.0.1"
+    urljoins "^0.0.3"
     uuid "^8.3.2"
     vm2 "^3.9.10"
     x2js "^3.4.3"
@@ -593,10 +595,10 @@ apipost-send@^0.0.31:
     whatwg-mimetype "^3.0.0"
     www-authenticate "^0.6.2"
 
-apipost-send@^0.0.35:
-  version "0.0.35"
-  resolved "https://registry.yarnpkg.com/apipost-send/-/apipost-send-0.0.35.tgz#5c6d1d0ee67df8a4270df32bb2c7bb311af96349"
-  integrity sha512-WVE1DZ0JW2MdhvP0Pbk8CZXk32ikng6BP9UTZ654hHifFmj0L3GhZ59p17eJE9eMJyDuD0jV757c9owq3/Ps2Q==
+apipost-send@^0.0.38:
+  version "0.0.38"
+  resolved "https://registry.yarnpkg.com/apipost-send/-/apipost-send-0.0.38.tgz#f367a121d2016dd35618c87b4a930b6bcdd7cd9e"
+  integrity sha512-IJNXaiOvx0VpjjU504CktqLLwGyVKHA8nyoGSxPk42Pltyh050mjZ5pwRjykpQfp+eJsmQFESwWryIRlt0D3DA==
   dependencies:
     "@rollup/plugin-node-resolve" "^13.3.0"
     agentkeepalive "^4.2.1"
@@ -625,6 +627,7 @@ apipost-send@^0.0.35:
     pm-event-util "^1.0.2"
     postman-request "^2.88.1-postman.31"
     querystring "^0.2.1"
+    rawheaders2obj "^0.0.2"
     rollup "^2.74.1"
     rollup-plugin-commonjs "^10.1.0"
     rollup-plugin-copy "^3.4.0"
@@ -634,7 +637,9 @@ apipost-send@^0.0.35:
     rollup-plugin-typescript2 "^0.31.2"
     set-cookie-parser "^2.5.0"
     strip-json-comments "^3.1.1"
+    url "^0.11.0"
     url-parse "^1.5.10"
+    urljoins "^0.0.3"
     whatwg-mimetype "^3.0.0"
     www-authenticate "^0.6.2"
 
@@ -1871,6 +1876,11 @@ js-yaml@^4.1.0:
   dependencies:
     argparse "^2.0.1"
 
+jsbn@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/jsbn/-/jsbn-1.1.0.tgz#b01307cb29b618a1ed26ec79e911f803c4da0040"
+  integrity sha512-4bYVV3aAMtDTTu4+xsDYa6sy9GyJ69/amsu9sYF2zqjiEoZA5xJi3BrfX3uY+/IekIu7MwdObdbDWpoZdBv3/A==
+
 jsbn@~0.1.0:
   version "0.1.1"
   resolved "https://registry.yarnpkg.com/jsbn/-/jsbn-0.1.1.tgz#a5e654c2e5a2deb5f201d96cefbca80c0ef2f513"
@@ -2452,6 +2462,11 @@ randombytes@^2.1.0:
   dependencies:
     safe-buffer "^5.1.0"
 
+rawheaders2obj@^0.0.2:
+  version "0.0.2"
+  resolved "https://registry.yarnpkg.com/rawheaders2obj/-/rawheaders2obj-0.0.2.tgz#2bd5e788e4d2c955997b604edbdbdef80caefdcc"
+  integrity sha512-8zIiPzSfa/KMEq29gaNiGlYVSre34OPjikIfH1yuCO54EsFHDnxY7KB1tWNIOX5YOVga9K5Eli31G7HFNhLucA==
+
 readable-stream@^3.6.0:
   version "3.6.0"
   resolved "https://registry.yarnpkg.com/readable-stream/-/readable-stream-3.6.0.tgz#337bbda3adc0706bd3e024426a286d4b4b2c9198"
@@ -2640,6 +2655,13 @@ slash@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/slash/-/slash-3.0.0.tgz#6539be870c165adbd5240220dbe361f1bc4d4634"
   integrity sha512-g9Q1haeby36OSStwb4ntCGGGaKsaVSjQ68fBxoQcutl5fS1vuY18H3wSt3jFyFtrkx+Kz0V1G85A4MyAdDMi2Q==
+
+sm-crypto@^0.3.11:
+  version "0.3.11"
+  resolved "https://registry.yarnpkg.com/sm-crypto/-/sm-crypto-0.3.11.tgz#43308a7ed99de74036cd9c9def3b3308a08f34e6"
+  integrity sha512-qBIyyTknmwfF8nStKHshL4Caw1AAfkar8B/voiEReENeCLtudbPt6B16QJ1mgAn1B4w0T+QDcu5XzGc7s22fWw==
+  dependencies:
+    jsbn "^1.1.0"
 
 socket-client-apipost@^0.0.22:
   version "0.0.22"
@@ -3025,13 +3047,18 @@ url-parse@^1.5.10:
     querystringify "^2.1.1"
     requires-port "^1.0.0"
 
-url@~0.11.0:
+url@^0.11.0, url@~0.11.0:
   version "0.11.0"
   resolved "https://registry.yarnpkg.com/url/-/url-0.11.0.tgz#3838e97cfc60521eb73c525a8e55bfdd9e2e28f1"
   integrity sha512-kbailJa29QrtXnxgq+DdCEGlbTeYM2eJUxsz6vjZavrCYPMIFHMKQmSKYAIuUK2i7hgPm28a8piX5NTUtM/LKQ==
   dependencies:
     punycode "1.3.2"
     querystring "0.2.0"
+
+urljoins@^0.0.3:
+  version "0.0.3"
+  resolved "https://registry.yarnpkg.com/urljoins/-/urljoins-0.0.3.tgz#13f836f5d5a548ba3e8f160a1173bba608bbbafa"
+  integrity sha512-stsvrYAeLWObvumQeNuA5aPsoeoJxtYVVDTWZPQi0/ZHUJGjwNLDLrwIqbRUQogNriPQOS/ahz9HYcq8b12wYg==
 
 utf-8-validate@^5.0.9:
   version "5.0.9"
