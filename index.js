@@ -29,8 +29,6 @@ const ConvertResult = function (status, message, data) {
 
 async function runtimeResponse(icpEvent, arg, workerIcp) {
   if (!_.isObject(icpEvent) && typeof workerIcp == 'object') {
-
-    console.log("")
     icpEvent = workerIcp
   }
 
