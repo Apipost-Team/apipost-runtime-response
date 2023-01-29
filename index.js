@@ -27,13 +27,20 @@ const ConvertResult = function (status, message, data) {
   return ASideTools.ConvertResult(status, message, data);
 };
 
-async function runtimeResponse(icpEvent, arg) {
+async function runtimeResponse(icpEvent, arg, workerIcp) {
+  if (!_.isObject(icpEvent) && typeof workerIcp == 'object') {
+
+    console.log("")
+    icpEvent = workerIcp
+  }
+
   try {
     if (_.isObject(arg)) {
       var { runtime_id, action, chunk } = arg;
 
       switch (action) {
         case 'stop':
+
           if (_.isObject(RUNNER_RUNTIME[runtime_id]) && _.isFunction(RUNNER_RUNTIME[runtime_id].stop) && RUNNER_REPORT_IDS[runtime_id]) {
             RUNNER_RUNTIME[runtime_id].stop(RUNNER_REPORT_IDS[runtime_id], '用户强制停止');
             delete RUNNER_REPORT_IDS[runtime_id];
@@ -42,29 +49,38 @@ async function runtimeResponse(icpEvent, arg) {
           }
           break;
         case 'runner':
+          var { test_events, option } = chunk;
+
+          let _scene = typeof option === 'object' ? option.scene : 'auto_test';
+
+
+          if (_.isUndefined(_scene)) {
+            _scene = 'auto_test';
+          }
+
           // 发送 RuntimeEvent 消息函数
           const emitRuntimeEvent = function (msg) {
             if (msg?.action == 'console' && msg?.method == 'log' && _.has(msg, 'message.data')) { // fix bug
               msg.message.data = JSON.stringify(msg.message.data);
             }
-            icpEvent.sender.send('runtime_response', ConvertResult('success', 'success', _.cloneDeep(msg)));
+
+            if (_scene == 'auto_test') {
+              icpEvent.sender.send('auto_test_response', ConvertResult('success', 'success', _.cloneDeep(msg)));
+            } else {
+              icpEvent.sender.send('runtime_response', ConvertResult('success', 'success', _.cloneDeep(msg)));
+            }
           };
 
-          var { test_events, option } = chunk;
+
 
           if (option.iterationCount <= 0) {
             option.iterationCount = 1;
           }
 
-          let _scene = typeof option === 'object' ? option.scene : 'auto_test';
-          if (_.isUndefined(_scene)) {
-            _scene = 'auto_test';
-          }
-
           // fix bug
           if (RUNNER_RUNTIME_SCENES[runtime_id] && RUNNER_RUNTIME_SCENES[runtime_id] == 'auto_test' && _scene == 'auto_test') {
             // if (RUNNER_RUNTIME_SCENES[runtime_id] == 'auto_test' && _scene == 'auto_test') {
-            icpEvent.sender.send('runner_response', {
+            icpEvent.sender.send('runner_response', { //todo
               runtime_id,
               status: 'ERROR',
               message: `当前正在执行任务 ${RUNNER_REPORT_IDS[runtime_id]}, 请结束后再执行其他任务`,
