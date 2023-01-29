@@ -724,31 +724,20 @@ apipost-inside-tools@^0.1.2:
     rollup-plugin-typescript2 "^0.31.2"
     uuid "^8.3.2"
 
-<<<<<<< HEAD
 apipost-mock@^1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/apipost-mock/-/apipost-mock-1.0.2.tgz#dc811bac71a9c109e8ba30d8830e2eb943cbe8c4"
   integrity sha512-eC/OtJpAT5IR2f20sx4u4J6KGGo8Kc8eJSzeCTGPv2sacqGFPnNUgl0XucWdJSea2GmGRap/FUky28HTiJzfyA==
 
-apipost-runtime@^1.1.64:
-  version "1.1.64"
-  resolved "https://registry.yarnpkg.com/apipost-runtime/-/apipost-runtime-1.1.64.tgz#ad4a71e8d33199f2f572059157ce3f9eb39ed5b4"
-  integrity sha512-6sRrIBVkEhU0SWjP7JOqRlah7SlkVG39za8ETxbvazyTirAVvKc0WcNTw7CytL2L3C3p8jvo+J0bkfZrliEArg==
+apipost-runtime@^1.1.66:
+  version "1.1.66"
+  resolved "https://registry.npmmirror.com/apipost-runtime/-/apipost-runtime-1.1.66.tgz#2c83677b26b0ae18e1a0719cd86f6f585aa15cbf"
+  integrity sha512-tBV/d/RIWvsY/iiOW/J0ZI6Oy4lpnPD5KF4NI6nP95WwVwKjTGeKrBXFvgwPp2k8oyvLhaJpceXYhC1pSjQJKw==
   dependencies:
     ajax-for-node "^1.0.9"
     apipost-inside-tools "^0.1.10"
     apipost-mock "^1.0.2"
     apipost-send "^0.0.40"
-=======
-apipost-runtime@^1.1.61:
-  version "1.1.61"
-  resolved "https://registry.yarnpkg.com/apipost-runtime/-/apipost-runtime-1.1.61.tgz#59e5f13d80139cd679289b3116d8130c001d3328"
-  integrity sha512-qGnTvO/F9TS/4jBaqIFQndNvi3IYUI7mBtxI3mvlsaiFFj1B0ucj5khLnysPlEEmNP1bvD8V1gYhErLA6IXxDQ==
-  dependencies:
-    ajax-for-node "^1.0.9"
-    apipost-inside-tools "^0.1.10"
-    apipost-send "^0.0.38"
->>>>>>> 1f1d07fb40df183ce9ca1ca91ceeb22cffca973a
     apipost-tools "^0.0.20"
     art-template "^4.13.2"
     async "^3.2.4"
@@ -830,17 +819,10 @@ apipost-send@^0.0.31:
     whatwg-mimetype "^3.0.0"
     www-authenticate "^0.6.2"
 
-<<<<<<< HEAD
 apipost-send@^0.0.40:
   version "0.0.40"
   resolved "https://registry.yarnpkg.com/apipost-send/-/apipost-send-0.0.40.tgz#a6ef5cc28f5eb8c3f7050f827a7fbe4f486080ea"
   integrity sha512-W+X3vsME7z/8ZUFfpolzbjC7NF9kX9OGK6d51VUcxaD+xvkePCSud//xnKK+Obvo92iMIFR3T0kkEn0mZx96kg==
-=======
-apipost-send@^0.0.38:
-  version "0.0.38"
-  resolved "https://registry.yarnpkg.com/apipost-send/-/apipost-send-0.0.38.tgz#f367a121d2016dd35618c87b4a930b6bcdd7cd9e"
-  integrity sha512-IJNXaiOvx0VpjjU504CktqLLwGyVKHA8nyoGSxPk42Pltyh050mjZ5pwRjykpQfp+eJsmQFESwWryIRlt0D3DA==
->>>>>>> 1f1d07fb40df183ce9ca1ca91ceeb22cffca973a
   dependencies:
     "@rollup/plugin-node-resolve" "^13.3.0"
     agentkeepalive "^4.2.1"
@@ -2539,14 +2521,11 @@ js-yaml@^4.1.0:
   dependencies:
     argparse "^2.0.1"
 
-<<<<<<< HEAD
 jsbi@^4.3.0:
   version "4.3.0"
   resolved "https://registry.yarnpkg.com/jsbi/-/jsbi-4.3.0.tgz#b54ee074fb6fcbc00619559305c8f7e912b04741"
   integrity sha512-SnZNcinB4RIcnEyZqFPdGPVgrg2AcnykiBy0sHVJQKHYeaLUvi3Exj+iaPpLnFVkDPZIV4U0yvgC9/R4uEAZ9g==
 
-=======
->>>>>>> 1f1d07fb40df183ce9ca1ca91ceeb22cffca973a
 jsbn@^1.1.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/jsbn/-/jsbn-1.1.0.tgz#b01307cb29b618a1ed26ec79e911f803c4da0040"
@@ -3377,11 +3356,7 @@ rawheaders2obj@^0.0.2:
   resolved "https://registry.yarnpkg.com/rawheaders2obj/-/rawheaders2obj-0.0.2.tgz#2bd5e788e4d2c955997b604edbdbdef80caefdcc"
   integrity sha512-8zIiPzSfa/KMEq29gaNiGlYVSre34OPjikIfH1yuCO54EsFHDnxY7KB1tWNIOX5YOVga9K5Eli31G7HFNhLucA==
 
-<<<<<<< HEAD
 readable-stream@^3.4.0, readable-stream@^3.6.0:
-=======
-readable-stream@^3.6.0:
->>>>>>> 1f1d07fb40df183ce9ca1ca91ceeb22cffca973a
   version "3.6.0"
   resolved "https://registry.yarnpkg.com/readable-stream/-/readable-stream-3.6.0.tgz#337bbda3adc0706bd3e024426a286d4b4b2c9198"
   integrity sha512-BViHy7LKeTz4oNnkcLJ+lVSL6vpiFeX6/d3oSH8zCW7UxP2onchk+vTGB143xuFjHS3deTgkKoXXymXqymiIdA==
