@@ -1,6 +1,6 @@
 {
   "name": "apipost-runtime-response",
-  "version": "1.0.52",
+  "version": "1.0.53",
   "description": "A module for apipost runtime",
   "main": "index.js",
   "scripts": {
