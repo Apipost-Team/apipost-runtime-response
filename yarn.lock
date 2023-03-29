@@ -752,10 +752,10 @@ apipost-mock@^1.0.2:
   resolved "https://registry.yarnpkg.com/apipost-mock/-/apipost-mock-1.0.2.tgz#dc811bac71a9c109e8ba30d8830e2eb943cbe8c4"
   integrity sha512-eC/OtJpAT5IR2f20sx4u4J6KGGo8Kc8eJSzeCTGPv2sacqGFPnNUgl0XucWdJSea2GmGRap/FUky28HTiJzfyA==
 
-apipost-runtime@^1.1.74:
-  version "1.1.74"
-  resolved "https://registry.yarnpkg.com/apipost-runtime/-/apipost-runtime-1.1.74.tgz#cc22eb332eabae583f62038e60d0423d6fccc33b"
-  integrity sha512-JNMR03IhknS/vI/AtyRmgVTO85vrWIone3OWywueDb8hFci3WplFXDhGibBWcb4BjRAKcvW4UTXHsYNFRldI4A==
+apipost-runtime@^1.1.75:
+  version "1.1.75"
+  resolved "https://registry.yarnpkg.com/apipost-runtime/-/apipost-runtime-1.1.75.tgz#5e59cb641fd79b850b3317afaedaec147161c541"
+  integrity sha512-PcV3bmG9qLdDvOUyN4nNJ+Rad2o/CTyEaUZYr46CdFMg8o0j6vAdcKvEiErQqa+u6RujoVGJdBWvoxHwNKO3XQ==
   dependencies:
     ajax-for-node "^1.0.9"
     apipost-inside-tools "^0.1.10"
@@ -3662,7 +3662,7 @@ sm-crypto@^0.3.11:
 
 socket-client-apipost@^0.0.22:
   version "0.0.22"
-  resolved "https://registry.npmjs.org/socket-client-apipost/-/socket-client-apipost-0.0.22.tgz#d5e95b6169eb15a031bd24efc8b9f47d9199c3c1"
+  resolved "https://registry.yarnpkg.com/socket-client-apipost/-/socket-client-apipost-0.0.22.tgz#d5e95b6169eb15a031bd24efc8b9f47d9199c3c1"
   integrity sha512-gk8r84OR4e6pVUkfoH8iL8+DfwodGI5YBnZrrsR1Ptf5VaT1Ua2hwbvCWwZHAlVtN37Ey/ijphghyAOa07Xzjg==
   dependencies:
     "@rollup/plugin-node-resolve" "^13.3.0"
