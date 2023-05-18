@@ -23,6 +23,7 @@
   },
   "homepage": "https://github.com/Apipost-Team/apipost-runtime-response#readme",
   "dependencies": {
+    "apache-dubbo-js": "^3.0.0-rc6",
     "apipost-grpc": "^0.0.16",
     "apipost-inside-tools": "^0.1.23",
     "apipost-runtime": "^1.1.91",
