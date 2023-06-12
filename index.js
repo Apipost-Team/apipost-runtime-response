@@ -10,6 +10,7 @@ const grpc = require('apipost-grpc'),
   buffersSchema = require('protocol-buffers-schema'),
   SocketClient = require('socket-client-apipost'),
   { Collection, Runtime } = require('apipost-runtime'),
+  { Dubbo, java, setting } = require('apache-dubbo-js/es7'),
   socketClient = new SocketClient();
 
 // global vars
@@ -26,6 +27,42 @@ const getCachePath = function () {
 const ConvertResult = function (status, message, data) {
   return ASideTools.ConvertResult(status, message, data);
 };
+
+// dubbo 参数序列化转换
+const handleDubboParams = function (params) {
+  let _params = [...params];
+
+  _params = _params.map((item) => {
+    if (item?.children.length <= 0) {
+      return java.combine(item.field_type, item.value)
+    }
+
+    return handleDubboChildrenParams(item)
+  });
+
+  return _params;
+};
+
+const handleDubboChildrenParams = function (childrenParam) {
+  const value = childrenParam?.children?.reduce((acc, curr) => {
+    // 参数没有选中，不进行转换
+    if (curr?.is_checked === -1) {
+      return acc;
+    }
+
+    if (curr?.children?.length <= 0) {
+      if (curr.key && curr.field_type) {
+        acc[curr.key] = java.combine(curr.field_type, curr.value);
+      }
+    } else {
+       acc[curr.key] = handleDubboChildrenParams(curr);
+    }
+
+    return acc;
+  }, {});
+
+  return java.combine(childrenParam.field_type, value)
+}
 
 async function runtimeResponse(icpEvent, arg, workerIcp) {
   if (!_.isObject(icpEvent) && typeof workerIcp == 'object') {
@@ -225,6 +262,68 @@ async function runtimeResponse(icpEvent, arg, workerIcp) {
             }
           } catch (err) {
             icpEvent.sender.send(`grpc_${func}_response`, ConvertResult('error', `error3: ${err.toString()}`, { target_id }));
+          }
+          break;
+        case 'dubbo':
+          var { data } = chunk;
+          var { target_id } = data;
+          var { url, apiRunName, funName, version = '', group = '', appName = '', query = [] } = data.request || {};
+
+          try {
+            const dubboSetting = setting.match(
+              apiRunName,
+              { version }
+            )
+            // 创建dubbo对象
+            const dubbo = new Dubbo({
+              application: { name: appName },
+              register: url, // zookeeper address
+              dubboVersion: '3.0.0',
+              interfaces: [apiRunName],
+              group,
+              dubboSetting
+            });
+
+            // 代理本地对象->dubbo对象
+            const dubboProxyService = dubbo.proxyService({
+              dubboInterface: apiRunName,
+              version,
+              group,
+              methods: {
+                [funName](params) {
+                  const finalParams = handleDubboParams(params);
+                  // 仅仅做参数hessian化转换
+                  return finalParams;
+                },
+              },
+            });
+
+            const response = await dubboProxyService[funName](query.parameter);
+
+            if (response.err) {
+              icpEvent.sender.send(
+                'dubbo_response',
+                ConvertResult(
+                  'error',
+                  String(response.err),
+                  { target_id, response: { ...response, err: String(response.err) } }
+                )
+              );
+              return;
+            };
+            icpEvent.sender.send(
+              'dubbo_response',
+              ConvertResult(
+                'success',
+                'success',
+                { target_id, response }
+              )
+            );
+          } catch (error) {
+            icpEvent.sender.send(
+              'dubbo_response',
+              ConvertResult('error', String(error), { err: String(error) })
+            );
           }
           break;
         case 'websocket':
