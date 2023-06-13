@@ -916,10 +916,10 @@ apipost-mock@^1.0.2:
   resolved "https://registry.yarnpkg.com/apipost-mock/-/apipost-mock-1.0.2.tgz#dc811bac71a9c109e8ba30d8830e2eb943cbe8c4"
   integrity sha512-eC/OtJpAT5IR2f20sx4u4J6KGGo8Kc8eJSzeCTGPv2sacqGFPnNUgl0XucWdJSea2GmGRap/FUky28HTiJzfyA==
 
-apipost-runtime@^1.1.99:
-  version "1.1.99"
-  resolved "https://registry.yarnpkg.com/apipost-runtime/-/apipost-runtime-1.1.99.tgz#414a612c92b83a5d58bec00801e1fc5d306767d7"
-  integrity sha512-oJiSY61ZKogybhHdJAhOQCp/8bMfPgbpvdCtKwa+/2qFSE6V44YS1mV6jAYRhmQ2plBQu2OUtmnhYv/0c/tULw==
+apipost-runtime@^1.1.100:
+  version "1.1.100"
+  resolved "https://registry.yarnpkg.com/apipost-runtime/-/apipost-runtime-1.1.100.tgz#dc1a70bf1be297d7c389e7d5d81a219afd3610fd"
+  integrity sha512-Slf0KdcolZa75JdXdbv86I+3E6V0euZE3eTn+hxjFbrF9cGYi9xBDIPfIqxYlRA7tiKQrAEuJTIdQJkA5QbWFw==
   dependencies:
     ajax-for-node "^1.0.9"
     apipost-inside-tools ">=0.1.10"
