@@ -397,8 +397,12 @@ async function runtimeResponse(icpEvent, arg, workerIcp) {
       }
     }
   } catch (err) {
+    var { chunk } = arg;
+    var { target_id } = chunk;
+    icpEvent.sender.send('runtime_response', ConvertResult('error', String(err), {
+      target_id
+    }));
     console.error(err);
-    icpEvent.sender.send('runtime_response', ConvertResult('error', String(err)));
   }
 }
 
