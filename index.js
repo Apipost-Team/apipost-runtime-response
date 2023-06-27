@@ -397,11 +397,18 @@ async function runtimeResponse(icpEvent, arg, workerIcp) {
       }
     }
   } catch (err) {
-    var { chunk } = arg;
-    var { target_id } = chunk;
-    icpEvent.sender.send('runtime_response', ConvertResult('error', String(err), {
-      target_id
-    }));
+    const runnerType = arg?.action;
+    if (runnerType === 'runner') {
+      let target_id = '-1';
+      if (_.isObject(arg)) {
+        target_id = arg?.chunk?.option?.collection[0]?.target_id;
+      }
+      icpEvent.sender.send('runtime_response', ConvertResult('error', String(err), {
+        target_id
+      }));
+    } else {
+      icpEvent.sender.send('runtime_response', ConvertResult('error', String(err)));
+    }
     console.error(err);
   }
 }
