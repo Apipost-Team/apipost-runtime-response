@@ -23,6 +23,44 @@ const getCachePath = function () {
   return ASideTools.getCachePath();
 };
 
+// 创建proto文件
+const createProtoFiles = function (proto, name = '') {
+  try {
+    let _path = '';
+
+    if (_.isString(proto)) {
+      let buffers = buffersSchema.parse(proto);
+
+      if (_.isObject(buffers) && _.isArray(buffers.messages) && buffers.messages.length > 0) {
+        if (name == '') {
+          _path = path.join(path.resolve(getCachePath()), `${CryptoJS.MD5(proto).toString()}.proto`);
+        } else {
+          _path = path.join(path.resolve(getCachePath()), name);
+        }
+
+        try {
+          fs.mkdirSync(path.dirname(_path), { recursive: true });
+          fs.writeFileSync(_path, proto);
+          return _path;
+        } catch (e) {
+          return false;
+        }
+        // if (fs.existsSync(_path) && 0) { /// && name == ''
+        //   return _path;
+        // } else {
+
+        // }
+      } else {
+        return false;
+      }
+    } else {
+      return false;
+    }
+  } catch (e) {
+    return false;
+  }
+}
+
 // 结果转换函数
 const ConvertResult = function (status, message, data) {
   return ASideTools.ConvertResult(status, message, data);
@@ -55,7 +93,7 @@ const handleDubboChildrenParams = function (childrenParam) {
         acc[curr.key] = java.combine(curr.field_type, curr.value);
       }
     } else {
-       acc[curr.key] = handleDubboChildrenParams(curr);
+      acc[curr.key] = handleDubboChildrenParams(curr);
     }
 
     return acc;
@@ -177,6 +215,7 @@ async function runtimeResponse(icpEvent, arg, workerIcp) {
                   }));
                   break;
                 case 'mockMethodRequest':
+                  console.log(option, 'optionoptionoption')
                   gRpcClient = new grpc(option);
                   icpEvent.sender.send(`grpc_${func}_response`, ConvertResult('success', 'success', {
                     target_id,
@@ -229,39 +268,40 @@ async function runtimeResponse(icpEvent, arg, workerIcp) {
                 callFunc[func]();
               }
             } else {
-              try {
-                const buffers = buffersSchema.parse(option.proto);
+              let _proto_file = createProtoFiles(option.proto);
 
-                if (_.isObject(buffers) && _.isArray(buffers.messages) && buffers.messages.length > 0) {
-                  const proto = path.join(path.resolve(getCachePath()), `${CryptoJS.MD5(option.proto).toString()}.proto`);
+              if (_proto_file) {
+                _.assign(option, {
+                  proto: _proto_file
+                });
 
-                  if (fs.existsSync(proto)) {
-                    option.proto = proto;
-                    if (_.isFunction(callFunc[func])) {
-                      callFunc[func]();
-                    }
-                  } else {
-                    fs.writeFile(proto, option.proto, (err) => {
-                      if (err) {
-                        icpEvent.sender.send(`grpc_${func}_response`, ConvertResult('error', `error1: ${err.toString()}`, { target_id }));
-                      } else {
-                        option.proto = proto;
+                if (_.isArray(option?.includeFiles)) {
+                  let _includeDirs = [];
+                  _.forEach(option.includeFiles, function (item) {
+                    if (_.isString(item.path) && !fs.existsSync(item.proto) && _.isString(item.proto)) {
+                      let _includeFile = createProtoFiles(item.proto, item.path);
 
-                        if (_.isFunction(callFunc[func])) {
-                          callFunc[func]();
-                        }
+                      if (_includeFile) {
+                        _includeDirs.push(path.resolve(path.dirname(_includeFile)));
                       }
-                    });
-                  }
-                } else {
-                  icpEvent.sender.send(`grpc_${func}_response`, ConvertResult('error', '对应的proto文件不存在', { target_id }));
+                    }
+                  });
+
+                  _.set(option, "includeDirs", _.union(option?.includeDirs, _includeDirs));
                 }
-              } catch (err) {
-                icpEvent.sender.send(`grpc_${func}_response`, ConvertResult('error', `error2: ${err.toString()}`, { target_id }));
+
+                if (_.isFunction(callFunc[func])) {
+                  callFunc[func]();
+                }
+
+              } else {
+                icpEvent.sender.send(`grpc_${func}_response`, ConvertResult('error', 'proto文件初始化创建失败' + _proto_file, { target_id }));
               }
             }
           } catch (err) {
-            icpEvent.sender.send(`grpc_${func}_response`, ConvertResult('error', `error3: ${err.toString()}`, { target_id }));
+            if (typeof func != 'undefined' && typeof target_id == 'string') {
+              icpEvent.sender.send(`grpc_${func}_response`, ConvertResult('error', `error3: ${err.toString()}`, { target_id }));
+            }
           }
           break;
         case 'dubbo':
@@ -397,8 +437,19 @@ async function runtimeResponse(icpEvent, arg, workerIcp) {
       }
     }
   } catch (err) {
+    const runnerType = arg?.action;
+    if (runnerType === 'runner') {
+      let target_id = '-1';
+      if (_.isObject(arg)) {
+        target_id = arg?.chunk?.option?.collection[0]?.target_id;
+      }
+      icpEvent.sender.send('runtime_response', ConvertResult('error', String(err), {
+        target_id
+      }));
+    } else {
+      icpEvent.sender.send('runtime_response', ConvertResult('error', String(err)));
+    }
     console.error(err);
-    icpEvent.sender.send('runtime_response', ConvertResult('error', String(err)));
   }
 }
 
