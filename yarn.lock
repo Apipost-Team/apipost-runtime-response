@@ -931,10 +931,10 @@ apipost-mock@^1.0.2:
   resolved "https://registry.yarnpkg.com/apipost-mock/-/apipost-mock-1.0.2.tgz#dc811bac71a9c109e8ba30d8830e2eb943cbe8c4"
   integrity sha512-eC/OtJpAT5IR2f20sx4u4J6KGGo8Kc8eJSzeCTGPv2sacqGFPnNUgl0XucWdJSea2GmGRap/FUky28HTiJzfyA==
 
-apipost-runtime@^1.1.103:
-  version "1.1.103"
-  resolved "https://registry.yarnpkg.com/apipost-runtime/-/apipost-runtime-1.1.103.tgz#c0a901beda1d8615684b1b0350bca22d1fa47741"
-  integrity sha512-rxXkMGPTy7ZYdfwqLBTgxMfVUp3ZPXUeyEDQyzbE5MUEJVmPKguqY2gCT+EYrplB/sfgOWmjQ1QAckzVm/2lYg==
+apipost-runtime@^1.1.105:
+  version "1.1.105"
+  resolved "https://registry.yarnpkg.com/apipost-runtime/-/apipost-runtime-1.1.105.tgz#423576fa680dfab44123b24ec4dfac89844411f9"
+  integrity sha512-2Yj7zrw8dCtvGvWeaSfnMtnLthH20iLplU9i7UdkxsOn8xzFLwyxRMuw7nNEcB+RoqH6EqcvFFEekXyP1e1eyw==
   dependencies:
     "@faker-js/faker" "^7.4.0"
     ajax-for-node "^1.0.9"
