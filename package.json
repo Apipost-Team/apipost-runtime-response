@@ -24,9 +24,9 @@
   "homepage": "https://github.com/Apipost-Team/apipost-runtime-response#readme",
   "dependencies": {
     "apache-dubbo-js": "^3.0.0-rc6",
-    "apipost-grpc": "^0.0.16",
+    "apipost-grpc": "^0.0.17",
     "apipost-inside-tools": "^0.1.23",
-    "apipost-runtime": "^1.1.101",
+    "apipost-runtime": "^1.1.103",
     "crypto-js": "^4.1.1",
     "dayjs": "^1.11.5",
     "fs": "^0.0.1-security",
