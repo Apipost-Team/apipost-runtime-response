@@ -202,10 +202,17 @@ async function runtimeResponse(icpEvent, arg, workerIcp) {
                   break;
                 case 'allMethodList':
                   gRpcClient = new grpc(option);
-                  icpEvent.sender.send(`grpc_${func}_response`, ConvertResult('success', 'success', {
-                    target_id,
-                    response: gRpcClient.allMethodList(),
-                  }));
+                  let _response = gRpcClient.allMethodList();
+
+                  if(_.isString(_response?.err)){
+                    icpEvent.sender.send(`grpc_${func}_response`, ConvertResult('error', _response?.err, { target_id }));
+                  }else{
+                    icpEvent.sender.send(`grpc_${func}_response`, ConvertResult('success', 'success', {
+                      target_id,
+                      response: _response,
+                    }));
+                  }
+                  
                   break;
                 case 'methodList':
                   gRpcClient = new grpc(option);
