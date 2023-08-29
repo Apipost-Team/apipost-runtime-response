@@ -813,10 +813,10 @@ apache-dubbo-js@^3.0.0-rc6:
     koa-compose "4.0.0"
     node-zookeeper-client "0.2.2"
 
-apipost-grpc@^0.0.17:
-  version "0.0.17"
-  resolved "https://registry.yarnpkg.com/apipost-grpc/-/apipost-grpc-0.0.17.tgz#6639e4c27daf916d9a6995106abcd1747bfd251f"
-  integrity sha512-0gzzUGWC7wAJijpRQJgwMaBr3OfVZ94H/d9D/gcETtnHQ05X2BXmdhpxgYox3IFVagZHL3JIKULg0KzDn7lWbw==
+apipost-grpc@^0.0.18:
+  version "0.0.18"
+  resolved "https://registry.yarnpkg.com/apipost-grpc/-/apipost-grpc-0.0.18.tgz#2694d025643d4f5987874efd49ab17b19e144b75"
+  integrity sha512-pbOcyVz1rGNFpMYLcJklptQEFif/EZ3O764sSyVPFHchta2/5tLDVKpbIjyN2fqDARMQ3Ao1W0lH7qwF59og/g==
   dependencies:
     "@grpc/grpc-js" "^1.6.7"
     "@grpc/proto-loader" "^0.6.13"
@@ -931,10 +931,10 @@ apipost-mock@^1.0.2:
   resolved "https://registry.yarnpkg.com/apipost-mock/-/apipost-mock-1.0.2.tgz#dc811bac71a9c109e8ba30d8830e2eb943cbe8c4"
   integrity sha512-eC/OtJpAT5IR2f20sx4u4J6KGGo8Kc8eJSzeCTGPv2sacqGFPnNUgl0XucWdJSea2GmGRap/FUky28HTiJzfyA==
 
-apipost-runtime@^1.1.105:
-  version "1.1.105"
-  resolved "https://registry.yarnpkg.com/apipost-runtime/-/apipost-runtime-1.1.105.tgz#423576fa680dfab44123b24ec4dfac89844411f9"
-  integrity sha512-2Yj7zrw8dCtvGvWeaSfnMtnLthH20iLplU9i7UdkxsOn8xzFLwyxRMuw7nNEcB+RoqH6EqcvFFEekXyP1e1eyw==
+apipost-runtime@^1.1.106:
+  version "1.1.106"
+  resolved "https://registry.yarnpkg.com/apipost-runtime/-/apipost-runtime-1.1.106.tgz#daa5dc3e5e14a01a57e6cf93a5ac784921648af9"
+  integrity sha512-ZiQinzKPZMuJJIVmuVMwcP00sYnqnv8u/cOB7qXMPDNgYd+ipgnkjOJBW5A5smdVSg+r2+7WW6Wv+/0DD7tzbg==
   dependencies:
     "@faker-js/faker" "^7.4.0"
     ajax-for-node "^1.0.9"
