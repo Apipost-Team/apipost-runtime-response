@@ -121,6 +121,10 @@ async function runtimeResponse(icpEvent, arg, workerIcp) {
             icpEvent.sender.send('stop_response', { runtime_id, status: 'SUCCESS' });
           }
           break;
+        case 'socket':
+          const { ConnectAndSendMessage } = require('apipost-socket-client');
+          icpEvent.sender.send(`socket_response`, await ConnectAndSendMessage(chunk));
+          break;
         case 'runner':
           var { test_events, option } = chunk;
 
@@ -204,15 +208,15 @@ async function runtimeResponse(icpEvent, arg, workerIcp) {
                   gRpcClient = new grpc(option);
                   let _response = gRpcClient.allMethodList();
 
-                  if(_.isString(_response?.err)){
+                  if (_.isString(_response?.err)) {
                     icpEvent.sender.send(`grpc_${func}_response`, ConvertResult('error', _response?.err, { target_id }));
-                  }else{
+                  } else {
                     icpEvent.sender.send(`grpc_${func}_response`, ConvertResult('success', 'success', {
                       target_id,
                       response: _response,
                     }));
                   }
-                  
+
                   break;
                 case 'methodList':
                   gRpcClient = new grpc(option);
