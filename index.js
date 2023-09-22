@@ -9,7 +9,7 @@ const grpc = require('apipost-grpc'),
   path = require('path'),
   buffersSchema = require('protocol-buffers-schema'),
   SocketClient = require('socket-client-apipost'),
-  { Collection, Runtime } = require('apipost-runtime'),
+  { Collection, Runtime } = require('apipost-runtime-enterprise-sdcb'),
   { Dubbo, java, setting } = require('apache-dubbo-js/es7'),
   socketClient = new SocketClient();
 
