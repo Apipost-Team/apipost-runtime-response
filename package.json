@@ -1,6 +1,6 @@
 {
   "name": "apipost-runtime-response",
-  "version": "1.0.83",
+  "version": "1.0.85",
   "description": "A module for apipost runtime",
   "main": "index.js",
   "scripts": {
@@ -34,8 +34,7 @@
     "lodash": ">=4.17.21",
     "protocol-buffers-schema": "^3.6.0",
     "socket-client-apipost": "^0.0.22",
-    "socket.io": "^4.5.1",
-    "uuid": ">=8.3.2"
+    "socket.io": "^4.5.1"
   },
   "peerDependencies": {
     "apipost-grpc": ">=0.0.15",
