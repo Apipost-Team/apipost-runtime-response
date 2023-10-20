@@ -1,6 +1,6 @@
 {
   "name": "apipost-runtime-response-enterprise-sdcb",
-  "version": "1.0.81",
+  "version": "1.0.84",
   "description": "A module for apipost runtime",
   "main": "index.js",
   "scripts": {
