@@ -747,7 +747,7 @@
     "koa-compose" "4.0.0"
     "node-zookeeper-client" "0.2.2"
 
-"apipost-grpc@^0.0.18":
+"apipost-grpc@>=0.0.15":
   "integrity" "sha512-pbOcyVz1rGNFpMYLcJklptQEFif/EZ3O764sSyVPFHchta2/5tLDVKpbIjyN2fqDARMQ3Ao1W0lH7qwF59og/g=="
   "resolved" "https://registry.npmjs.org/apipost-grpc/-/apipost-grpc-0.0.18.tgz"
   "version" "0.0.18"
@@ -772,7 +772,7 @@
     "swagger-client" "^3.18.5"
     "uuid" "^8.3.2"
 
-"apipost-inside-tools@^0.1.10", "apipost-inside-tools@^0.1.2", "apipost-inside-tools@^0.1.23", "apipost-inside-tools@>=0.1.10":
+"apipost-inside-tools@^0.1.10", "apipost-inside-tools@^0.1.2", "apipost-inside-tools@>=0.1.10":
   "integrity" "sha512-wggmppqSDYYjCxbJrlFT9BxTRI2zBXDdItrvmAGWRtK55EB2h7/oqmZAyni1x7SMtsWqHAL3MWd1Gw/sOBtusg=="
   "resolved" "https://registry.npmjs.org/apipost-inside-tools/-/apipost-inside-tools-0.1.23.tgz"
   "version" "0.1.23"
@@ -800,7 +800,7 @@
   "resolved" "https://registry.npmjs.org/apipost-mock/-/apipost-mock-1.0.2.tgz"
   "version" "1.0.2"
 
-"apipost-runtime@^1.1.110":
+"apipost-runtime@>=1.1.50":
   "integrity" "sha512-xS8JmesM2mUSC3FhnTN98neghw8g2G2HcC0/0Ii637McDiwz+04GRwI/qrm+TWQM/ZMiiFhCSTCiodYGdJEvDw=="
   "resolved" "https://registry.npmjs.org/apipost-runtime/-/apipost-runtime-1.1.110.tgz"
   "version" "1.1.110"
@@ -950,10 +950,10 @@
     "whatwg-mimetype" "^3.0.0"
     "www-authenticate" "^0.6.2"
 
-"apipost-socket-client@^1.0.0":
-  "integrity" "sha512-KjBwC8RFTyHEwGSaJvZowS2yIR6s55+GHHRb2YQUircdPkg/buZSR3WMYxhlMWw5oePJvfZ10t15aCZM0xltLQ=="
-  "resolved" "https://registry.npmjs.org/apipost-socket-client/-/apipost-socket-client-1.0.0.tgz"
-  "version" "1.0.0"
+"apipost-socket-client@^1.0.1":
+  "integrity" "sha512-njsJxDBbcXqHmMUrO/lDTL39OP3iCTWAREo2NVC1bIkx8657lswKymy8g+MuP9pp4dDMKaMOuQUpp5Mt0dmXhw=="
+  "resolved" "https://registry.npmjs.org/apipost-socket-client/-/apipost-socket-client-1.0.1.tgz"
+  "version" "1.0.1"
   dependencies:
     "buffer-concat" "^1.0.0"
     "iso_8583" "^2.6.7"
@@ -1623,7 +1623,7 @@
   "resolved" "https://registry.npmjs.org/date-format/-/date-format-4.0.13.tgz"
   "version" "4.0.13"
 
-"dayjs@^1.11.3", "dayjs@^1.11.5", "dayjs@>=1.11.4":
+"dayjs@^1.11.3", "dayjs@>=1.11.4", "dayjs@>=1.11.5":
   "integrity" "sha512-CAdX5Q3YW3Gclyo5Vpqkgpj8fSdLQcRuzfX6mC6Phy0nfJ0eGYOeS7m4mt2plDWLAtA4TqTakvbboHvUxfe4iA=="
   "resolved" "https://registry.npmjs.org/dayjs/-/dayjs-1.11.5.tgz"
   "version" "1.11.5"
@@ -4884,7 +4884,7 @@
   "resolved" "https://registry.npmjs.org/uuid/-/uuid-3.4.0.tgz"
   "version" "3.4.0"
 
-"uuid@^8.3.0", "uuid@^8.3.2", "uuid@8.3.2":
+"uuid@^8.3.0", "uuid@^8.3.2", "uuid@>=8.3.2", "uuid@8.3.2":
   "integrity" "sha512-+NYs2QeMWy+GWFOEm9xnn6HCDp0l7QBD7ml8zLUmJ+93Q5NF0NocErnwkTkXVFNiX3/fpC6afS8Dhb/gz7R7eg=="
   "resolved" "https://registry.npmjs.org/uuid/-/uuid-8.3.2.tgz"
   "version" "8.3.2"
