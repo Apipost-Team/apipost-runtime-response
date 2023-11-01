@@ -1,6 +1,6 @@
 {
   "name": "apipost-runtime-response-enterprise-sdcb",
-  "version": "1.0.89",
+  "version": "1.0.90",
   "description": "A module for apipost runtime",
   "main": "index.js",
   "scripts": {
@@ -27,7 +27,7 @@
     "apipost-grpc": ">=0.0.15",
     "apipost-inside-tools": ">=0.1.10",
     "apipost-runtime": ">=1.1.50",
-    "apipost-runtime-enterprise-sdcb": "^1.1.120",
+    "apipost-runtime-enterprise-sdcb": "^1.1.123",
     "apipost-socket-client": "^1.0.4",
     "uuid": "^8.3.2",
     "crypto-js": "^4.1.1",
