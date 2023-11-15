@@ -110,10 +110,8 @@ async function runtimeResponse(icpEvent, arg, workerIcp) {
   try {
     if (_.isObject(arg)) {
       var { runtime_id, action, chunk } = arg;
-
       switch (action) {
         case 'stop':
-
           if (_.isObject(RUNNER_RUNTIME[runtime_id]) && _.isFunction(RUNNER_RUNTIME[runtime_id].stop) && RUNNER_REPORT_IDS[runtime_id]) {
             RUNNER_RUNTIME[runtime_id].stop(RUNNER_REPORT_IDS[runtime_id], '用户强制停止');
             delete RUNNER_REPORT_IDS[runtime_id];
