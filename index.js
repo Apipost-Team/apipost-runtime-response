@@ -125,7 +125,7 @@ async function runtimeResponse(icpEvent, arg, workerIcp) {
 
           if (_.isString(result?.code) && !_.isEmpty(result?.code)) {
             icpEvent.sender.send(`socket_response`, {
-              target_id: "",
+              target_id: chunk?.test_events[0]?.data?.target_id,
               status: "error",
               message: `连接失败: ${result?.code}`,
               request: {},
