@@ -1,6 +1,6 @@
 {
   "name": "apipost-runtime-response",
-  "version": "1.0.87",
+  "version": "1.0.88",
   "description": "A module for apipost runtime",
   "main": "index.js",
   "scripts": {
@@ -27,7 +27,7 @@
     "apipost-grpc": ">=0.0.15",
     "apipost-inside-tools": ">=0.1.10",
     "apipost-runtime": ">=1.1.50",
-    "apipost-socket-client": "^1.0.4",
+    "apipost-socket-client": "^1.0.7",
     "uuid": "^8.3.2",
     "crypto-js": "^4.1.1",
     "dayjs": ">=1.11.5",

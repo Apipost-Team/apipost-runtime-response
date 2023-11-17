@@ -121,7 +121,21 @@ async function runtimeResponse(icpEvent, arg, workerIcp) {
           break;
         case 'socket':
           const { ConnectAndSendMessage } = require('apipost-socket-client');
-          icpEvent.sender.send(`socket_response`, await ConnectAndSendMessage(chunk));
+          const result = await ConnectAndSendMessage(chunk);
+
+          if (_.isString(result?.code) && !_.isEmpty(result?.code)) {
+            icpEvent.sender.send(`socket_response`, {
+              target_id: "",
+              status: "error",
+              message: `连接失败: ${result?.code}`,
+              request: {},
+              response: {},
+              assert: [],
+            });
+          } else {
+            icpEvent.sender.send(`socket_response`, await ConnectAndSendMessage(chunk));
+          }
+
           break;
         case 'runner':
           var { test_events, option } = chunk;
