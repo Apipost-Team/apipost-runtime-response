@@ -110,10 +110,8 @@ async function runtimeResponse(icpEvent, arg, workerIcp) {
   try {
     if (_.isObject(arg)) {
       var { runtime_id, action, chunk } = arg;
-
       switch (action) {
         case 'stop':
-
           if (_.isObject(RUNNER_RUNTIME[runtime_id]) && _.isFunction(RUNNER_RUNTIME[runtime_id].stop) && RUNNER_REPORT_IDS[runtime_id]) {
             RUNNER_RUNTIME[runtime_id].stop(RUNNER_REPORT_IDS[runtime_id], '用户强制停止');
             delete RUNNER_REPORT_IDS[runtime_id];
@@ -123,7 +121,21 @@ async function runtimeResponse(icpEvent, arg, workerIcp) {
           break;
         case 'socket':
           const { ConnectAndSendMessage } = require('apipost-socket-client');
-          icpEvent.sender.send(`socket_response`, await ConnectAndSendMessage(chunk));
+          const result = await ConnectAndSendMessage(chunk);
+
+          if (_.isString(result?.code) && !_.isEmpty(result?.code)) {
+            icpEvent.sender.send(`socket_response`, {
+              target_id: chunk?.test_events[0]?.data?.target_id,
+              status: "error",
+              message: `连接失败: ${result?.code}`,
+              request: {},
+              response: {},
+              assert: [],
+            });
+          } else {
+            icpEvent.sender.send(`socket_response`, await ConnectAndSendMessage(chunk));
+          }
+
           break;
         case 'runner':
           var { test_events, option } = chunk;

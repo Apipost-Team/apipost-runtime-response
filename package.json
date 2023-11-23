@@ -28,7 +28,7 @@
     "apipost-inside-tools": ">=0.1.10",
     "apipost-runtime": ">=1.1.50",
     "apipost-runtime-enterprise-sdcb": "^1.1.127",
-    "apipost-socket-client": "^1.0.4",
+    "apipost-socket-client": "^1.0.9",
     "uuid": "^8.3.2",
     "crypto-js": "^4.1.1",
     "dayjs": ">=1.11.5",
