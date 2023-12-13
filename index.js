@@ -7,6 +7,7 @@ const grpc = require('apipost-grpc'),
   uuid = require('uuid'),
   dayjs = require('dayjs'),
   path = require('path'),
+  JSON5 = require('json5'),
   buffersSchema = require('protocol-buffers-schema'),
   SocketClient = require('socket-client-apipost'),
   { Collection, Runtime } = require('apipost-runtime-enterprise-sdcb'),
@@ -139,7 +140,7 @@ async function runtimeResponse(icpEvent, arg, workerIcp) {
           break;
         case 'runner':
           var { test_events, option } = chunk;
-
+          console.log(JSON.stringify(option?.requester, null, "\t"), `optionoptionoption`)
           let _scene = typeof option === 'object' ? option.scene : 'auto_test';
 
 
@@ -202,9 +203,10 @@ async function runtimeResponse(icpEvent, arg, workerIcp) {
           break;
         case 'grpc':
           var { option, data, target_id } = chunk;
-          var { func, target } = data;
+          var { func, target, message } = data;
           var callFunc = {};
           var gRpcClient = {};
+          var streamGrpc = {};
 
           new Array('serverList', 'allMethodList', 'methodList', 'mockMethodRequest', 'request').forEach((func) => {
             callFunc[func] = function () {
@@ -238,26 +240,102 @@ async function runtimeResponse(icpEvent, arg, workerIcp) {
                   }));
                   break;
                 case 'mockMethodRequest':
-                  console.log(option, 'optionoptionoption')
                   gRpcClient = new grpc(option);
                   icpEvent.sender.send(`grpc_${func}_response`, ConvertResult('success', 'success', {
                     target_id,
                     response: gRpcClient.mockMethodRequest(target.service, target.method),
                   }));
                   break;
+                case 'client_bidi':
+                  if (_.isObject(streamGrpc[target_id]) && _.isFunction(streamGrpc[target_id]['write'])) {
+                    let msg = {}
+
+                    try {
+                      msg = JSON5.parse(message)
+                    } catch (e) { }
+                    streamGrpc[target_id]['write'](msg)
+                  }
+                  break;
+                case 'cancel':
+                  if (_.isObject(streamGrpc[target_id]) && _.isFunction(streamGrpc[target_id]['cancel'])) {
+                    try {
+                      streamGrpc[target_id]['cancel']()
+                    } catch (e) { }
+                  }
+                  break;
                 case 'request':
                   gRpcClient = new grpc(option);
-                  gRpcClient.request(target.service, target.method, target).then((data) => {
-                    icpEvent.sender.send(`grpc_${func}_response`, ConvertResult('success', 'success', {
-                      target_id,
-                      response: data.data,
-                    }));
-                  }).catch((err) => {
-                    icpEvent.sender.send(`grpc_${func}_response`, ConvertResult('error', err.message.toString(), {
-                      target_id,
-                      response: data.data,
-                    }));
-                  });
+                  gRpcClient.methodList(target.service).then((res) => {
+                    const methods = _.find(res?.method, function (o) { return o.name == target.method; });
+
+                    if (!methods) {
+                      icpEvent.sender.send(`grpc_${func}_response`, ConvertResult('error', `${target.method} 不存在`, {
+                        target_id,
+                        response: {},
+                      }));
+                    } else {
+                      gRpcClient.request(target.service, methods, target, (err, response, stream, streamType) => {
+                        streamGrpc[target_id] = stream;
+
+                        if (err) {
+                          icpEvent.sender.send(`grpc_${func}_response`, ConvertResult('error', String(err), {
+                            target_id,
+                            response: {},
+                          }));
+                        } else {
+                          if (['server_stream', 'bidi_stream'].indexOf(streamType) > -1) {
+                            streamGrpc[target_id].on('data', (data) => {
+                              console.log('server stream data:', data);
+                              icpEvent.sender.send(`grpc_${func}_response`, ConvertResult('success', 'success', {
+                                target_id,
+                                action: 'chunk',
+                                streamType,
+                                response: data,
+                              }));
+                            });
+
+                            streamGrpc[target_id].on('end', () => {
+                              console.log('complate');
+                              icpEvent.sender.send(`grpc_${func}_response`, ConvertResult('success', 'success', {
+                                target_id,
+                                action: 'complate',
+                                streamType,
+                                response: 'Call completed',
+                              }));
+                            });
+
+                            streamGrpc[target_id].on('error', (error) => {
+                              icpEvent.sender.send(`grpc_${func}_response`, ConvertResult('error', String(error), {
+                                target_id,
+                                streamType,
+                                response: {},
+                              }));
+                            });
+                          } else if (streamType == 'unary') {
+                            icpEvent.sender.send(`grpc_${func}_response`, ConvertResult('success', 'success', {
+                              target_id,
+                              streamType,
+                              response
+                            }));
+                          }
+                        }
+
+                      });
+                    }
+
+                  })
+
+                  // gRpcClient.request(target.service, target.method, target).then((data) => {
+                  //   icpEvent.sender.send(`grpc_${func}_response`, ConvertResult('success', 'success', {
+                  //     target_id,
+                  //     response: data.data,
+                  //   }));
+                  // }).catch((err) => {
+                  //   icpEvent.sender.send(`grpc_${func}_response`, ConvertResult('error', err.message.toString(), {
+                  //     target_id,
+                  //     response: data.data,
+                  //   }));
+                  // });
                   break;
               }
             };
