@@ -246,21 +246,35 @@ async function runtimeResponse(icpEvent, arg, workerIcp) {
                     response: gRpcClient.mockMethodRequest(target.service, target.method),
                   }));
                   break;
-                case 'client_bidi':
+                case 'clientStreamWrite':
                   if (_.isObject(streamGrpc[target_id]) && _.isFunction(streamGrpc[target_id]['write'])) {
                     let msg = {}
 
                     try {
                       msg = JSON5.parse(message)
-                    } catch (e) { }
+                      icpEvent.sender.send(`grpc_${func}_response`, ConvertResult('success', `success`, {
+                        target_id
+                      }));
+                    } catch (e) {
+                      icpEvent.sender.send(`grpc_${func}_response`, ConvertResult('error', `error`, {
+                        target_id
+                      }));
+                    }
                     streamGrpc[target_id]['write'](msg)
                   }
                   break;
-                case 'cancel':
+                case 'cancelSream':
                   if (_.isObject(streamGrpc[target_id]) && _.isFunction(streamGrpc[target_id]['cancel'])) {
                     try {
                       streamGrpc[target_id]['cancel']()
-                    } catch (e) { }
+                      icpEvent.sender.send(`grpc_${func}_response`, ConvertResult('success', `success`, {
+                        target_id
+                      }));
+                    } catch (e) {
+                      icpEvent.sender.send(`grpc_${func}_response`, ConvertResult('error', `error`, {
+                        target_id
+                      }));
+                    }
                   }
                   break;
                 case 'request':
