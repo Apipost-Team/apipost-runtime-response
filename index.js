@@ -232,6 +232,17 @@ async function runtimeResponse(icpEvent, arg, workerIcp) {
                   }
 
                   break;
+                case 'allMethodListByReflection':
+                  gRpcClient = new grpc(option);
+                  gRpcClient.allMethodListByReflection(_.get(target, `url`), target_id).then((response) => {
+                    icpEvent.sender.send(`grpc_${func}_response`, ConvertResult('success', 'success', {
+                      target_id,
+                      response
+                    }));
+                  }).catch((e) => {
+                    icpEvent.sender.send(`grpc_${func}_response`, ConvertResult('error', String(e), { target_id }));
+                  })
+                  break;
                 case 'methodList':
                   gRpcClient = new grpc(option);
                   icpEvent.sender.send(`grpc_${func}_response`, ConvertResult('success', 'success', {
