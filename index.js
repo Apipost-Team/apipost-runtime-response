@@ -208,7 +208,7 @@ async function runtimeResponse(icpEvent, arg, workerIcp) {
           var gRpcClient = {};
           var streamGrpc = {};
 
-          new Array('serverList', 'allMethodList', 'methodList', 'mockMethodRequest', 'request').forEach((func) => {
+          new Array('serverList', 'allMethodList', 'methodList', 'mockMethodRequest', 'request', 'allMethodListByReflection', 'clientStreamWrite', 'cancelSream').forEach((func) => {
             callFunc[func] = function () {
               switch (func) {
                 case 'serverList':
